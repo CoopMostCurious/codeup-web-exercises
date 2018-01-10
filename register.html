@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register.html Exercise</title>
+</head>
+<body>
+
+    <!--
+
+    Register new user. Labels all around. All inputs except middle name required.
+    First name, last name, middle, email, password, username, birthdate.
+    Email input should only accept dates.
+    Birthdate only gets dates.
+    Add a handful of checkboxes and labels for OS's (MacOS, Win, Linux, OS2, ChromeOS)
+    Add a handful of checkboxes and labels for the name of every programming language you have a name for.
+    When the page loads, make sure the cursor starts in the first name field.
+
+    -->
+    <form method="post" action="https://hookb.in/vLN57Lpo"></form>
+        <div>
+            <h1>Register today here!!!!</h1>
+        </div>
+        <div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" required autofocus>
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" required>
+        </div>
+        <div>
+            <label for="middleName">Middle Name (Optional)</label>
+            <input id="middleName" type="text">
+        </div>
+        <div>
+            <label for="emailAddress">Email Address</label>
+            <input id="emailAddress" type="email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="text" required>
+        </div>
+        <div>
+            <label for="username">Username</label>
+            <input id="username" type="text" required>
+        </div>
+        <div>
+            <label for="birthdate">Birth Date</label>
+            <input id="birthdate" type="date" required>
+        </div>
+        <div>
+            <h2>Please check all the operating systems you use on a regular basis</h2>
+
+            <label for="MacOS">
+                <input id="MacOS" name="operatingSys" value="macos" type="checkbox" multiple required>MacOS
+            </label>
+            <label for="Windows">
+                <input id="Windows" name="operatingSys" value="windows" type="checkbox" multiple required>Windows
+            </label>
+            <label for="Linux">
+                <input id="Linux" name="operatingSys" value="linux" type="checkbox" multiple required>Linux
+            </label>
+            <label for="FreeBSD">
+                <input id="FreeBSD" name="operatingSys" value="freebsd" type="checkbox" multiple required>FreeBSD
+            </label>
+            <label for="IBM OS/2">
+                <input id="IBM OS/2" name="operatingSys" value="os2" type="checkbox" multiple required>IBM OS/2
+            </label>
+            <label for="ChromeOS">
+                <input id="ChromeOS" name="operatingSys" value="chromeos" type="checkbox" multiple required>ChromeOS
+            </label>
+            <label for="MS-DOS">
+                <input id="MS-DOS" name="operatingSys" value="msdos" type="checkbox" multiple required>MS-DOS
+            </label>
+        </div>
+        <div>
+            <h2>Please check all the programming languages you are familiar with</h2>
+            <label for="assembly">
+                <input id="assembly" name="programmingLang" value="assembly" type="checkbox" multiple required>Assembly
+            </label>
+            <label for="c_prog">
+                <input id="c_prog" name="programmingLang" value="c_prog" type="checkbox" multiple required>C
+            </label>
+            <label for="cpp_prog">
+                <input id="cpp_prog" name="programmingLang" value="cpp_prog" type="checkbox" multiple required>C++
+            </label>
+            <label for="csharp">
+                <input id="csharp" name="programmingLang" value="csharp" type="checkbox" multiple required>C#
+            </label>
+            <label for="swift">
+                <input id="swift" name="programmingLang" value="swift" type="checkbox" multiple required>Swift
+            </label>
+            <label for="java">
+                <input id="java" name="programmingLang" value="java" type="checkbox" multiple required>Java
+            </label>
+            <label for="javascript">
+                <input id="javascript" name="programmingLang" value="javascript" type="checkbox" multiple required>JavaScript
+            </label>
+            <label for="visual basic">
+                <input id="visual basic" name="programmingLang" value="visual basic" type="checkbox" multiple required>Visual Basic
+            </label>
+        </div>
+        <div>
+            <button type="submit">Register Me Now!</button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advertisement.html Exercise</title>
+</head>
+<body>
+
+<!--Directions:
+    Make a form for making an advertisement. Cursor in title on page load.
+    Title, price, description required. Description should hold lots of text.-->
+
+<form method="post" action="https://hookb.in/vLN57Lpo">
+    <fieldset>
+
+        <legend><h1>Listing Information</h1></legend>
+
+        <div id="titleDiv">
+            <label for="title">Item:</label>
+            <input id="title" name="title" type="text" required autofocus>
+        </div>
+        <div id="priceDiv">
+            <label for="price">Price:</label>
+            <input id="price" name="price" type="text" required>
+        </div>
+        <div id="descriptionDiv">
+            <p>Item Description:</p>
+            <textarea id="description" name="description" cols="30" rows="10" placeholder="Enter as much information about the item as you wish." required></textarea>
+        </div>
+        <div id="submitButtonDiv">
+            <input type="submit">
+        </div>
+
+    </fieldset>
+</form>
+</body>
+</html>
