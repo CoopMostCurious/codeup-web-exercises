@@ -5,54 +5,67 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form method="post" action="https://hookb.in/EkqRP3jd">
+    <main>
+        <form method="post" action="https://hookb.in/vqLdab9a">
 
-        <h1>Register With Us</h1>
-        <hr>
-        <div>
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Enter the email address">
-        </div>
-        <hr>
-        <div>
-            <label for='password'>Password:</label>
-            <input type="password" name="password" id="password" placeholder="Enter the password">
-        </div>
-        <hr>
-        <!-- Name attribute is what controls the payload
+            <h1>Register With Us</h1>
+            <hr>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Enter the email address">
+            </div>
+            <hr>
+            <div>
+                <label for='password'>Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter the password">
+            </div>
 
-        for matches the id; make id and name the same
+            <hr>
+            <!-- Name attribute is what controls the payload
 
-        -->
-        <textarea rows="10" cols="30" name="bio" id="bio" placeholder="Tell us about yourself!"></textarea>
-        <hr>
-        <h2>How did you hear about us?</h2>
-        <label for="billboard">Billboard
-            <input id="billboard" type="radio" name="hdyhau" value="billboard">
-        </label>
-        <label for="radio">Radio Advertisement
-            <input id="radio" type="radio" name="hdyhau" value="radio">
-        </label>
-        <label for="internet">Internet
-            <input id="internet" type="radio" name="hdyhau" value="internet">
-        </label>
-        <label for="other">Other
-            <input id="other" type="radio" name="hdyhau" value="other">
-        </label>
-        <hr>
-        <label for="browser">What web browser are you on?</label>
-        <!-- Keep an eye on how drop downs work!
-        Must get more proficient; will come up with more projects for practice. :)
-        -->
-        <select name="browser" id="browser">
-            <option value="edge">Microsoft Edge</option>
-            <option value="chrome">Google Chrome</option>
-            <option value="safari">Apple Safari</option>
-            <option value="firefox">Mozilla Firefox</option>
-            <option value="ie10">MS Internet Explorer</option>
-        </select>
-        <hr>
-        <input type="submit">
-    </form>
+            for matches the id; make id and name the same
+
+            -->
+            <h3>Tell us about yourself!</h3>
+            <textarea rows="10" cols="30" name="bio" id="bio" placeholder="Tell us about yourself!"></textarea>
+
+            <hr>
+
+            <!--    fieldset seems to be nifty for formatting
+                    Ensure that item name is after the input tag!
+            -->
+            <fieldset>
+                <legend>How did you hear about us?</legend>
+                <label for="billboard">
+                    <input id="billboard" type="radio" name="about" value="billboard">Billboard
+                </label>
+                <label for="radio">
+                    <input id="radio" type="radio" name="about" value="radio">Radio Advertisement
+                </label>
+                <label for="internet">
+                    <input id="internet" type="radio" name="about" value="internet">Internet
+                </label>
+                <label for="other">
+                    <input id="other" type="radio" name="about" value="other">Other
+                </label>
+            </fieldset>
+
+            <hr>
+
+            <label for="browser">What web browser are you on?</label>
+            <!-- Keep an eye on how drop downs work!
+            Must get more proficient; will come up with more projects for practice. :)
+            -->
+            <select name="browser" id="browser">
+                <option value="edge">Microsoft Edge</option>
+                <option value="chrome">Google Chrome</option>
+                <option value="safari">Apple Safari</option>
+                <option value="firefox">Mozilla Firefox</option>
+                <option value="ie10">MS Internet Explorer</option>
+            </select>
+            <hr>
+            <input type="submit">
+        </form>
+    </main>
 </body>
 </html>
