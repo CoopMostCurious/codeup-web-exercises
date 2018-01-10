@@ -6,26 +6,45 @@
 </head>
 <body>
     <form method="post" action="https://hookb.in/EkqRP3jd">
+        <h1>Register With Us</h1>
+        <hr>
         <label for="email">Email:</label>
         <input type="text" name="email" id="email" placeholder="Enter the email address">
-        <br>
+        <hr>
         <label for='password'>Password:</label>
         <input type="password" name="password" id="password" placeholder="Enter the password">
-        <br>
+        <hr>
         <!-- Name attribute is what controls the payload
 
         for matches the id; make id and name the same
 
         -->
-        <textarea id="bio" placeholder="Tell us about yourself!"></textarea>
-        <br>
+        <textarea name="bio" id="bio" placeholder="Tell us about yourself!"></textarea>
+        <hr>
         <h2>How did you hear about us?</h2>
         <label for="billboard">Billboard
-        <input id="billboard" type="radio" name="hdyhau" value="billboard">
+            <input id="billboard" type="radio" name="hdyhau" value="billboard">
         </label>
-        <label for="radio">Radio
-        <input id="radio" type="radio" name="hdyhau" value="radio">
+        <label for="radio">Radio Advertisement
+            <input id="radio" type="radio" name="hdyhau" value="radio">
         </label>
+        <label for="internet">Internet
+            <input id="internet" type="radio" name="hdyhau" value="internet">
+        </label>
+        <label for="other">Other
+            <input id="other" type="radio" name="hdyhau" value="other">
+        </label>
+        <hr>
+        <label for="browser">What web browser are you on?</label>
+        <select name="browser" id="browser">
+            <option value="edge">Microsoft Edge</option>
+            <option value="chrome">Google Chrome</option>
+            <option value="safari">Apple Safari</option>
+            <option value="firefox">Mozilla Firefox</option>
+            <option value="ie10">MS Internet Explorer</option>
+        </select>
+        <hr>
+        <input type="submit">
     </form>
 </body>
 </html>
