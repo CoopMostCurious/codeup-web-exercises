@@ -1,0 +1,57 @@
+/*
+    Color Scheme:
+
+    #0D1321
+    #1D2D44
+    #3E5C76
+    #748CAB
+    #F0EBD8
+
+    https://coolors.co/0d1321-1d2d44-3e5c76-748cab-f0ebd8
+
+    */
+
+html {
+    background-color: #1D2D44;
+    color: #F0EBD8;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.fancy-header {
+    color: #748CAB;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    color: #748CAB;
+    text-decoration-line: underline;
+    font-size: 2em;
+}
+
+.pictureTableFormat {
+    border: none;
+    align-content: center;
+}
+
+.pricingTable {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.clickablePic {
+    height:60px;
+    border:0;
+}
+
+ul, ol {
+    list-style-type: square;
+}
+
+a:visited {
+    color: #3E5C76;
+}
+
+tr:nth-child(odd) {
+    background-color: #3E5C76;
+}
