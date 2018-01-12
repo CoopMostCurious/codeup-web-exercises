@@ -1,11 +1,11 @@
 .box {
-    border: 1px;
+    border: 1px solid black;
     width: 150px;
     height: 50px;
-    padding: 5px;
+    padding: 10px;
     color: #FFF;
     font-weight: bold;
-    margin: 5px;
+    margin-bottom: 10px;
 }
 
 #box-red {
