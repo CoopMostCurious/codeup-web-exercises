@@ -21,6 +21,10 @@ h1 {
     right: -40px;
 }
 
+.box:nth-child(5) {
+    clear: left;
+}
+
 #box-red {
     background-color: #F00;
 }
@@ -35,7 +39,6 @@ h1 {
 
 #box-green {
     background-color: #0f0;
-    clear: left;
 }
 
 #box-blue {
