@@ -1,0 +1,28 @@
+#container {
+    background-color: #F3C178;
+    margin: 50px auto;
+    width: 500px;
+    border: 1px solid #B94F3C;
+    padding: 10px;
+}
+
+#box1 {
+    background-color: #FE6C52;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    float: right;
+}
+
+#box2 {
+    background-color: white;
+    border: 1px solid #000;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    float: left;
+}
+
+p {
+    clear: left;
+}

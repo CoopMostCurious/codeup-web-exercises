@@ -1,0 +1,24 @@
+.moveReason {
+    width: 100%;
+    box-sizing:border-box;
+    margin:auto;
+}
+
+fieldset, form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #96BE84;
+    color: #817D64;
+    width: 100%;
+    box-sizing:border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+h1, h2, .legal {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}

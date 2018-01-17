@@ -3,1035 +3,2083 @@
 <head>
     <meta charset="UTF-8">
     <title>Rental Lease Application</title>
+    <link rel="stylesheet" href="css/tx-residential-lease-app.css">
 </head>
 <body>
 
-    <form method="post" action="https://hookb.in/vLN57Lpo">
-
-        <div>
-            <h1>Texas Association of Realtors</h1>
-        </div>
-
-        <div>
-            <h2>Online Residential Lease Application</h2>
-        </div>
-
-        <div id="propertyInfo">
-            <fieldset>
-                <legend>Property Information</legend>
+    <div id="sidebar">
+        <header>
             <div>
-
-                <label for="propertyStreet">Property Street Address</label>
-                <input id="propertyStreet" type="text" placeholder="Property Address" size="45" required>
-
-                <label for="propertyCity">City</label>
-                <input id="propertyCity" placeholder="City" type="text" required>
-
-                <label for="propertyState">State</label>
-                <select id="propertyState" name="propertyState">
-                    <option value="AL">AL</option>
-                    <option value="AK">AK</option>
-                    <option value="AR">AR</option>
-                    <option value="AZ">AZ</option>
-                    <option value="CA">CA</option>
-                    <option value="CO">CO</option>
-                    <option value="CT">CT</option>
-                    <option value="DC">DC</option>
-                    <option value="DE">DE</option>
-                    <option value="FL">FL</option>
-                    <option value="GA">GA</option>
-                    <option value="HI">HI</option>
-                    <option value="IA">IA</option>
-                    <option value="ID">ID</option>
-                    <option value="IL">IL</option>
-                    <option value="IN">IN</option>
-                    <option value="KS">KS</option>
-                    <option value="KY">KY</option>
-                    <option value="LA">LA</option>
-                    <option value="MA">MA</option>
-                    <option value="MD">MD</option>
-                    <option value="ME">ME</option>
-                    <option value="MI">MI</option>
-                    <option value="MN">MN</option>
-                    <option value="MO">MO</option>
-                    <option value="MS">MS</option>
-                    <option value="MT">MT</option>
-                    <option value="NC">NC</option>
-                    <option value="NE">NE</option>
-                    <option value="NH">NH</option>
-                    <option value="NJ">NJ</option>
-                    <option value="NM">NM</option>
-                    <option value="NV">NV</option>
-                    <option value="NY">NY</option>
-                    <option value="ND">ND</option>
-                    <option value="OH">OH</option>
-                    <option value="OK">OK</option>
-                    <option value="OR">OR</option>
-                    <option value="PA">PA</option>
-                    <option value="RI">RI</option>
-                    <option value="SC">SC</option>
-                    <option value="SD">SD</option>
-                    <option value="TN">TN</option>
-                    <option value="TX" selected>TX</option>
-                    <option value="UT">UT</option>
-                    <option value="VT">VT</option>
-                    <option value="VA">VA</option>
-                    <option value="WA">WA</option>
-                    <option value="WI">WI</option>
-                    <option value="WV">WV</option>
-                    <option value="WY">WY</option>
-                </select>
-
-                <label for="propertyZipCode">ZIP Code</label>
-                <input id="propertyZipCode" type="text" size="5" maxlength="5" required>
-
-            </div>
-            <div>
-
-                <label for="moveinDate">Anticipated Move-in Date</label>
-                <input id="moveinDate" type="date" required>
-
-                <label for="monthlyRate">Monthly Rent (Enter amount)   $</label>
-                <input id="monthlyRate" type="number" size="4" required>
-
-                <label for="securityDeposit">Security Deposit (Enter amount)   $</label>
-                <input id="securityDeposit" type="number" size="4" required>
-
-            </div>
-            <div>
-
-                <label for="landlordReferral">Applicant was referred to landlord by:</label>
-                <select name="landlordReferral" id="landlordReferral">
-                    <option value="agent">Real Estate Agent</option>
-                    <option value="newspaper">Newspaper</option>
-                    <option value="sign">Sign</option>
-                    <option value="internet">Internet</option>
-                    <option value="other">Other</option>
-                </select>
-
+                <h1>Texas Association of Realtors</h1>
             </div>
 
-            </fieldset>
-
-        </div>
-
-        <div id="applicantInfo">
-            <fieldset>
-
-                <legend>Applicant Information</legend>
-
             <div>
-
-                <label for="firstname1">First Name</label>
-                <input id="firstname1" name="firstname1" type="text" placeholder="First Name" required>
-
-                <label for="middlename1">Middle Name</label>
-                <input id="middlename1" name="middlename1" type="text" placeholder="Middle Name">
-
-                <label for="lastname1">Last Name</label>
-                <input id="lastname1" name="lastname1" type="text" placeholder="Last Name" required>
-
-                <label for="maidenname1">Maiden Name</label>
-                <input id="maidenname1" name="maidenname1" type="text" placeholder="Maiden Name">
-
-                <label for="coapplicantVerify">Check if there is a co-applicant</label>
-                <input id="coapplicantVerify" type="checkbox">
-
+                <h2>Online Residential Lease Application</h2>
             </div>
-            <div>
+        </header>
 
-                <label for="email1">Email Address</label>
-                <input id="email1" type="email" placeholder="Email Address">
+        <form method="post" action="https://hookb.in/vyx91JNG">
 
-                <label for="home1">Home Number</label>
-                <input id="home1" type="text" placeholder="Home Number" size="10" required>
+            <div id="propertyInfo">
+                <fieldset>
+                    <legend>Property Information</legend>
+                    <div class="field">
 
-                <label for="work1">Work Number</label>
-                <input id="work1" type="text" placeholder="Work Number" size="10">
+                        <label for="propertyStreet">Property Street Address</label>
+                        <input id="propertyStreet" type="text" name="propertyStreet" placeholder="Property Address" size="45" required>
 
-                <label for="mobile1">Mobile Number</label>
-                <input id="mobile1" type="text" placeholder="Mobile Number" size="10">
+                        <label for="propertyCity">City</label>
+                        <input id="propertyCity" placeholder="City" type="text" name="propertyCity" required>
 
-            </div>
-            <div>
+                        <label for="propertyState">State</label>
+                        <select id="propertyState" name="propertyState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
 
-                <label for="ssn1">Social Security Number</label>
-                <input id="ssn1" type="text" placeholder="Social Security Number" required size="9">
+                        <label for="propertyZipCode">ZIP Code</label>
+                        <input id="propertyZipCode" type="text" size="5" maxlength="5" name="propertyZipCode" required>
 
-                <label for="license1">Driver License Number</label>
-                <input id="license1" type="number" placeholder="Driver License Number" required>
+                    </div>
+                    <div>
 
-                <label for="license1state">State</label>
-                <select id="license1state" name="license1state">
-                    <option value="AL">AL</option>
-                    <option value="AK">AK</option>
-                    <option value="AR">AR</option>
-                    <option value="AZ">AZ</option>
-                    <option value="CA">CA</option>
-                    <option value="CO">CO</option>
-                    <option value="CT">CT</option>
-                    <option value="DC">DC</option>
-                    <option value="DE">DE</option>
-                    <option value="FL">FL</option>
-                    <option value="GA">GA</option>
-                    <option value="HI">HI</option>
-                    <option value="IA">IA</option>
-                    <option value="ID">ID</option>
-                    <option value="IL">IL</option>
-                    <option value="IN">IN</option>
-                    <option value="KS">KS</option>
-                    <option value="KY">KY</option>
-                    <option value="LA">LA</option>
-                    <option value="MA">MA</option>
-                    <option value="MD">MD</option>
-                    <option value="ME">ME</option>
-                    <option value="MI">MI</option>
-                    <option value="MN">MN</option>
-                    <option value="MO">MO</option>
-                    <option value="MS">MS</option>
-                    <option value="MT">MT</option>
-                    <option value="NC">NC</option>
-                    <option value="NE">NE</option>
-                    <option value="NH">NH</option>
-                    <option value="NJ">NJ</option>
-                    <option value="NM">NM</option>
-                    <option value="NV">NV</option>
-                    <option value="NY">NY</option>
-                    <option value="ND">ND</option>
-                    <option value="OH">OH</option>
-                    <option value="OK">OK</option>
-                    <option value="OR">OR</option>
-                    <option value="PA">PA</option>
-                    <option value="RI">RI</option>
-                    <option value="SC">SC</option>
-                    <option value="SD">SD</option>
-                    <option value="TN">TN</option>
-                    <option value="TX" selected>TX</option>
-                    <option value="UT">UT</option>
-                    <option value="VT">VT</option>
-                    <option value="VA">VA</option>
-                    <option value="WA">WA</option>
-                    <option value="WI">WI</option>
-                    <option value="WV">WV</option>
-                    <option value="WY">WY</option>
-                </select>
+                        <label for="moveinDate">Anticipated Move-in Date</label>
+                        <input id="moveinDate" type="date" name="moveinDate" required>
 
-                <label for="dob1">Date of Birth</label>
-                <input id="dob1" type="date" required>
+                        <label for="monthlyRate">Monthly Rent (Enter amount)   $</label>
+                        <input id="monthlyRate" type="number" size="4" name="monthlyRate" name="monthlyRate" required>
 
-            </div>
-            <div>
+                        <label for="securityDeposit">Security Deposit (Enter amount)   $</label>
+                        <input id="securityDeposit" type="number" size="4" name="securityDeposit" required>
 
-                <label for="height1a">Height
-                    <input id="height1a" type="text" size="1" required >ft
-                    <input id="height1b" type="text" required size="2">in</label>
+                    </div>
+                    <div>
 
-                <label for="weight1">Weight
-                <input id="weight1" type="text" required size="3"> lbs.</label>
+                        <label for="landlordReferral">Applicant was referred to landlord by:</label>
+                        <select name="landlordReferral" id="landlordReferral">
+                            <option value="agent">Real Estate Agent</option>
+                            <option value="newspaper">Newspaper</option>
+                            <option value="sign">Sign</option>
+                            <option value="internet">Internet</option>
+                            <option value="other">Other</option>
+                        </select>
 
-                <label for="eyecolor1">Eye Color</label>
-                <select id="eyecolor1" name="eyecolor1" required>
-                    <option value="black">Black</option>
-                    <option value="blue">Blue</option>
-                    <option value="brown">Brown</option>
-                    <option value="gray">Gray</option>
-                    <option value="green">Green</option>
-                    <option value="hazel">Hazel</option>
-                    <option value="multi">Multicolored</option>
-                    <option value="other">Other</option>
-                </select>
+                    </div>
 
-                <label for="maritalstat1"></label>Marital Status
-                <select name="maritalstat1" id="maritalstat1" required>
-                    <option value="single">Single</option>
-                    <option value="married">Married</option>
-                    <option value="divorced">Divorced</option>
-                    <option value="widow">Widow/Widower</option>
-                </select>
-
-                <label for="citizenship1">Citizenship</label>
-                <select name="citizenship1" id="citizenship1" required>
-                    <option value="AF">Afghanistan</option>
-                    <option value="AX">Åland Islands</option>
-                    <option value="AL">Albania</option>
-                    <option value="DZ">Algeria</option>
-                    <option value="AS">American Samoa</option>
-                    <option value="AD">Andorra</option>
-                    <option value="AO">Angola</option>
-                    <option value="AI">Anguilla</option>
-                    <option value="AQ">Antarctica</option>
-                    <option value="AG">Antigua and Barbuda</option>
-                    <option value="AR">Argentina</option>
-                    <option value="AM">Armenia</option>
-                    <option value="AW">Aruba</option>
-                    <option value="AU">Australia</option>
-                    <option value="AT">Austria</option>
-                    <option value="AZ">Azerbaijan</option>
-                    <option value="BS">Bahamas</option>
-                    <option value="BH">Bahrain</option>
-                    <option value="BD">Bangladesh</option>
-                    <option value="BB">Barbados</option>
-                    <option value="BY">Belarus</option>
-                    <option value="BE">Belgium</option>
-                    <option value="BZ">Belize</option>
-                    <option value="BJ">Benin</option>
-                    <option value="BM">Bermuda</option>
-                    <option value="BT">Bhutan</option>
-                    <option value="BO">Bolivia, Plurinational State of</option>
-                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-                    <option value="BA">Bosnia and Herzegovina</option>
-                    <option value="BW">Botswana</option>
-                    <option value="BV">Bouvet Island</option>
-                    <option value="BR">Brazil</option>
-                    <option value="IO">British Indian Ocean Territory</option>
-                    <option value="BN">Brunei Darussalam</option>
-                    <option value="BG">Bulgaria</option>
-                    <option value="BF">Burkina Faso</option>
-                    <option value="BI">Burundi</option>
-                    <option value="KH">Cambodia</option>
-                    <option value="CM">Cameroon</option>
-                    <option value="CA">Canada</option>
-                    <option value="CV">Cape Verde</option>
-                    <option value="KY">Cayman Islands</option>
-                    <option value="CF">Central African Republic</option>
-                    <option value="TD">Chad</option>
-                    <option value="CL">Chile</option>
-                    <option value="CN">China</option>
-                    <option value="CX">Christmas Island</option>
-                    <option value="CC">Cocos (Keeling) Islands</option>
-                    <option value="CO">Colombia</option>
-                    <option value="KM">Comoros</option>
-                    <option value="CG">Congo</option>
-                    <option value="CD">Congo, the Democratic Republic of the</option>
-                    <option value="CK">Cook Islands</option>
-                    <option value="CR">Costa Rica</option>
-                    <option value="CI">Côte d'Ivoire</option>
-                    <option value="HR">Croatia</option>
-                    <option value="CU">Cuba</option>
-                    <option value="CW">Curaçao</option>
-                    <option value="CY">Cyprus</option>
-                    <option value="CZ">Czech Republic</option>
-                    <option value="DK">Denmark</option>
-                    <option value="DJ">Djibouti</option>
-                    <option value="DM">Dominica</option>
-                    <option value="DO">Dominican Republic</option>
-                    <option value="EC">Ecuador</option>
-                    <option value="EG">Egypt</option>
-                    <option value="SV">El Salvador</option>
-                    <option value="GQ">Equatorial Guinea</option>
-                    <option value="ER">Eritrea</option>
-                    <option value="EE">Estonia</option>
-                    <option value="ET">Ethiopia</option>
-                    <option value="FK">Falkland Islands (Malvinas)</option>
-                    <option value="FO">Faroe Islands</option>
-                    <option value="FJ">Fiji</option>
-                    <option value="FI">Finland</option>
-                    <option value="FR">France</option>
-                    <option value="GF">French Guiana</option>
-                    <option value="PF">French Polynesia</option>
-                    <option value="TF">French Southern Territories</option>
-                    <option value="GA">Gabon</option>
-                    <option value="GM">Gambia</option>
-                    <option value="GE">Georgia</option>
-                    <option value="DE">Germany</option>
-                    <option value="GH">Ghana</option>
-                    <option value="GI">Gibraltar</option>
-                    <option value="GR">Greece</option>
-                    <option value="GL">Greenland</option>
-                    <option value="GD">Grenada</option>
-                    <option value="GP">Guadeloupe</option>
-                    <option value="GU">Guam</option>
-                    <option value="GT">Guatemala</option>
-                    <option value="GG">Guernsey</option>
-                    <option value="GN">Guinea</option>
-                    <option value="GW">Guinea-Bissau</option>
-                    <option value="GY">Guyana</option>
-                    <option value="HT">Haiti</option>
-                    <option value="HM">Heard Island and McDonald Islands</option>
-                    <option value="VA">Holy See (Vatican City State)</option>
-                    <option value="HN">Honduras</option>
-                    <option value="HK">Hong Kong</option>
-                    <option value="HU">Hungary</option>
-                    <option value="IS">Iceland</option>
-                    <option value="IN">India</option>
-                    <option value="ID">Indonesia</option>
-                    <option value="IR">Iran, Islamic Republic of</option>
-                    <option value="IQ">Iraq</option>
-                    <option value="IE">Ireland</option>
-                    <option value="IM">Isle of Man</option>
-                    <option value="IL">Israel</option>
-                    <option value="IT">Italy</option>
-                    <option value="JM">Jamaica</option>
-                    <option value="JP">Japan</option>
-                    <option value="JE">Jersey</option>
-                    <option value="JO">Jordan</option>
-                    <option value="KZ">Kazakhstan</option>
-                    <option value="KE">Kenya</option>
-                    <option value="KI">Kiribati</option>
-                    <option value="KP">Korea, Democratic People's Republic of</option>
-                    <option value="KR">Korea, Republic of</option>
-                    <option value="KW">Kuwait</option>
-                    <option value="KG">Kyrgyzstan</option>
-                    <option value="LA">Lao People's Democratic Republic</option>
-                    <option value="LV">Latvia</option>
-                    <option value="LB">Lebanon</option>
-                    <option value="LS">Lesotho</option>
-                    <option value="LR">Liberia</option>
-                    <option value="LY">Libya</option>
-                    <option value="LI">Liechtenstein</option>
-                    <option value="LT">Lithuania</option>
-                    <option value="LU">Luxembourg</option>
-                    <option value="MO">Macao</option>
-                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-                    <option value="MG">Madagascar</option>
-                    <option value="MW">Malawi</option>
-                    <option value="MY">Malaysia</option>
-                    <option value="MV">Maldives</option>
-                    <option value="ML">Mali</option>
-                    <option value="MT">Malta</option>
-                    <option value="MH">Marshall Islands</option>
-                    <option value="MQ">Martinique</option>
-                    <option value="MR">Mauritania</option>
-                    <option value="MU">Mauritius</option>
-                    <option value="YT">Mayotte</option>
-                    <option value="MX">Mexico</option>
-                    <option value="FM">Micronesia, Federated States of</option>
-                    <option value="MD">Moldova, Republic of</option>
-                    <option value="MC">Monaco</option>
-                    <option value="MN">Mongolia</option>
-                    <option value="ME">Montenegro</option>
-                    <option value="MS">Montserrat</option>
-                    <option value="MA">Morocco</option>
-                    <option value="MZ">Mozambique</option>
-                    <option value="MM">Myanmar</option>
-                    <option value="NA">Namibia</option>
-                    <option value="NR">Nauru</option>
-                    <option value="NP">Nepal</option>
-                    <option value="NL">Netherlands</option>
-                    <option value="NC">New Caledonia</option>
-                    <option value="NZ">New Zealand</option>
-                    <option value="NI">Nicaragua</option>
-                    <option value="NE">Niger</option>
-                    <option value="NG">Nigeria</option>
-                    <option value="NU">Niue</option>
-                    <option value="NF">Norfolk Island</option>
-                    <option value="MP">Northern Mariana Islands</option>
-                    <option value="NO">Norway</option>
-                    <option value="OM">Oman</option>
-                    <option value="PK">Pakistan</option>
-                    <option value="PW">Palau</option>
-                    <option value="PS">Palestinian Territory, Occupied</option>
-                    <option value="PA">Panama</option>
-                    <option value="PG">Papua New Guinea</option>
-                    <option value="PY">Paraguay</option>
-                    <option value="PE">Peru</option>
-                    <option value="PH">Philippines</option>
-                    <option value="PN">Pitcairn</option>
-                    <option value="PL">Poland</option>
-                    <option value="PT">Portugal</option>
-                    <option value="PR">Puerto Rico</option>
-                    <option value="QA">Qatar</option>
-                    <option value="RE">Réunion</option>
-                    <option value="RO">Romania</option>
-                    <option value="RU">Russian Federation</option>
-                    <option value="RW">Rwanda</option>
-                    <option value="BL">Saint Barthélemy</option>
-                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-                    <option value="KN">Saint Kitts and Nevis</option>
-                    <option value="LC">Saint Lucia</option>
-                    <option value="MF">Saint Martin (French part)</option>
-                    <option value="PM">Saint Pierre and Miquelon</option>
-                    <option value="VC">Saint Vincent and the Grenadines</option>
-                    <option value="WS">Samoa</option>
-                    <option value="SM">San Marino</option>
-                    <option value="ST">Sao Tome and Principe</option>
-                    <option value="SA">Saudi Arabia</option>
-                    <option value="SN">Senegal</option>
-                    <option value="RS">Serbia</option>
-                    <option value="SC">Seychelles</option>
-                    <option value="SL">Sierra Leone</option>
-                    <option value="SG">Singapore</option>
-                    <option value="SX">Sint Maarten (Dutch part)</option>
-                    <option value="SK">Slovakia</option>
-                    <option value="SI">Slovenia</option>
-                    <option value="SB">Solomon Islands</option>
-                    <option value="SO">Somalia</option>
-                    <option value="ZA">South Africa</option>
-                    <option value="GS">South Georgia and the South Sandwich Islands</option>
-                    <option value="SS">South Sudan</option>
-                    <option value="ES">Spain</option>
-                    <option value="LK">Sri Lanka</option>
-                    <option value="SD">Sudan</option>
-                    <option value="SR">Suriname</option>
-                    <option value="SJ">Svalbard and Jan Mayen</option>
-                    <option value="SZ">Swaziland</option>
-                    <option value="SE">Sweden</option>
-                    <option value="CH">Switzerland</option>
-                    <option value="SY">Syrian Arab Republic</option>
-                    <option value="TW">Taiwan, Province of China</option>
-                    <option value="TJ">Tajikistan</option>
-                    <option value="TZ">Tanzania, United Republic of</option>
-                    <option value="TH">Thailand</option>
-                    <option value="TL">Timor-Leste</option>
-                    <option value="TG">Togo</option>
-                    <option value="TK">Tokelau</option>
-                    <option value="TO">Tonga</option>
-                    <option value="TT">Trinidad and Tobago</option>
-                    <option value="TN">Tunisia</option>
-                    <option value="TR">Turkey</option>
-                    <option value="TM">Turkmenistan</option>
-                    <option value="TC">Turks and Caicos Islands</option>
-                    <option value="TV">Tuvalu</option>
-                    <option value="UG">Uganda</option>
-                    <option value="UA">Ukraine</option>
-                    <option value="AE">United Arab Emirates</option>
-                    <option value="GB">United Kingdom</option>
-                    <option value="US" selected>United States</option>
-                    <option value="UM">United States Minor Outlying Islands</option>
-                    <option value="UY">Uruguay</option>
-                    <option value="UZ">Uzbekistan</option>
-                    <option value="VU">Vanuatu</option>
-                    <option value="VE">Venezuela, Bolivarian Republic of</option>
-                    <option value="VN">Viet Nam</option>
-                    <option value="VG">Virgin Islands, British</option>
-                    <option value="VI">Virgin Islands, U.S.</option>
-                    <option value="WF">Wallis and Futuna</option>
-                    <option value="EH">Western Sahara</option>
-                    <option value="YE">Yemen</option>
-                    <option value="ZM">Zambia</option>
-                    <option value="ZW">Zimbabwe</option>
-                </select>
+                </fieldset>
 
             </div>
 
-            </fieldset>
+            <div id="applicantInfo">
+                <fieldset>
 
-        </div>
+                    <legend>Applicant Information</legend>
 
-        <div id="emergencyContact">
+                    <div>
 
-            <fieldset>
-                <legend>Emergency Contact Information</legend>
+                        <label for="firstname1">First Name</label>
+                        <input id="firstname1" name="firstname1" type="text" placeholder="First Name" required>
 
-            <div>
+                        <label for="middlename1">Middle Name</label>
+                        <input id="middlename1" name="middlename1" type="text" placeholder="Middle Name">
 
-                <label for="firstname2">First Name</label>
-                <input id="firstname2" type="text" placeholder="First Name">
+                        <label for="lastname1">Last Name</label>
+                        <input id="lastname1" name="lastname1" type="text" placeholder="Last Name" required>
 
-                <label for="middlename2">Middle Name</label>
-                <input id="middlename2" type="text" placeholder="Middle Name">
+                        <label for="maidenname1">Maiden Name</label>
+                        <input id="maidenname1" name="maidenname1" type="text" placeholder="Maiden Name">
 
-                <label for="lastname2">Last Name</label>
-                <input id="lastname2" type="text" placeholder="Last Name">
+                        <label for="coapplicantVerify">Check if there is a co-applicant</label>
+                        <input id="coapplicantVerify" type="checkbox">
+
+                    </div>
+                    <div>
+
+                        <label for="email1">Email Address</label>
+                        <input id="email1" type="email" placeholder="Email Address">
+
+                        <label for="home1">Home Number</label>
+                        <input id="home1" type="text" placeholder="Home Number" size="10" required>
+
+                        <label for="work1">Work Number</label>
+                        <input id="work1" type="text" placeholder="Work Number" size="10">
+
+                        <label for="mobile1">Mobile Number</label>
+                        <input id="mobile1" type="text" placeholder="Mobile Number" size="10">
+
+                    </div>
+                    <div>
+
+                        <label for="ssn1">Social Security Number</label>
+                        <input id="ssn1" type="text" placeholder="Social Security Number" required size="9">
+
+                        <label for="license1">Driver License Number</label>
+                        <input id="license1" type="number" placeholder="Driver License Number" required>
+
+                        <label for="license1state">State</label>
+                        <select id="license1state" name="license1state">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="dob1">Date of Birth</label>
+                        <input id="dob1" type="date" required>
+
+                    </div>
+                    <div>
+
+                        <label for="height1a">Height
+                            <input id="height1a" type="text" size="1" required >ft
+                            <input id="height1b" type="text" required size="2">in</label>
+
+                        <label for="weight1">Weight
+                            <input id="weight1" type="text" required size="3"> lbs.</label>
+
+                        <label for="eyecolor1">Eye Color</label>
+                        <select id="eyecolor1" name="eyecolor1" required>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="brown">Brown</option>
+                            <option value="gray">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="hazel">Hazel</option>
+                            <option value="multi">Multicolored</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="maritalstat1"></label>Marital Status
+                        <select name="maritalstat1" id="maritalstat1" required>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widow">Widow/Widower</option>
+                        </select>
+
+                        <label for="citizenship1">Citizenship</label>
+                        <select name="citizenship1" id="citizenship1" required>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AQ">Antarctica</option>
+                            <option value="AG">Antigua and Barbuda</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AW">Aruba</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BM">Bermuda</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia, Plurinational State of</option>
+                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BV">Bouvet Island</option>
+                            <option value="BR">Brazil</option>
+                            <option value="IO">British Indian Ocean Territory</option>
+                            <option value="BN">Brunei Darussalam</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="CA">Canada</option>
+                            <option value="CV">Cape Verde</option>
+                            <option value="KY">Cayman Islands</option>
+                            <option value="CF">Central African Republic</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CX">Christmas Island</option>
+                            <option value="CC">Cocos (Keeling) Islands</option>
+                            <option value="CO">Colombia</option>
+                            <option value="KM">Comoros</option>
+                            <option value="CG">Congo</option>
+                            <option value="CD">Congo, the Democratic Republic of the</option>
+                            <option value="CK">Cook Islands</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="CI">Côte d'Ivoire</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CW">Curaçao</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DM">Dominica</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="EG">Egypt</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GQ">Equatorial Guinea</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FK">Falkland Islands (Malvinas)</option>
+                            <option value="FO">Faroe Islands</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GF">French Guiana</option>
+                            <option value="PF">French Polynesia</option>
+                            <option value="TF">French Southern Territories</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GM">Gambia</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Greece</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GD">Grenada</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="GU">Guam</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GG">Guernsey</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="HM">Heard Island and McDonald Islands</option>
+                            <option value="VA">Holy See (Vatican City State)</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IR">Iran, Islamic Republic of</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IM">Isle of Man</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="JE">Jersey</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KI">Kiribati</option>
+                            <option value="KP">Korea, Democratic People's Republic of</option>
+                            <option value="KR">Korea, Republic of</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Lao People's Democratic Republic</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libya</option>
+                            <option value="LI">Liechtenstein</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MO">Macao</option>
+                            <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MV">Maldives</option>
+                            <option value="ML">Mali</option>
+                            <option value="MT">Malta</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MU">Mauritius</option>
+                            <option value="YT">Mayotte</option>
+                            <option value="MX">Mexico</option>
+                            <option value="FM">Micronesia, Federated States of</option>
+                            <option value="MD">Moldova, Republic of</option>
+                            <option value="MC">Monaco</option>
+                            <option value="MN">Mongolia</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MS">Montserrat</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NR">Nauru</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="NU">Niue</option>
+                            <option value="NF">Norfolk Island</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="NO">Norway</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PW">Palau</option>
+                            <option value="PS">Palestinian Territory, Occupied</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PN">Pitcairn</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="RE">Réunion</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russian Federation</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="BL">Saint Barthélemy</option>
+                            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                            <option value="KN">Saint Kitts and Nevis</option>
+                            <option value="LC">Saint Lucia</option>
+                            <option value="MF">Saint Martin (French part)</option>
+                            <option value="PM">Saint Pierre and Miquelon</option>
+                            <option value="VC">Saint Vincent and the Grenadines</option>
+                            <option value="WS">Samoa</option>
+                            <option value="SM">San Marino</option>
+                            <option value="ST">Sao Tome and Principe</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="SC">Seychelles</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SX">Sint Maarten (Dutch part)</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SB">Solomon Islands</option>
+                            <option value="SO">Somalia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                            <option value="SS">South Sudan</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SD">Sudan</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SJ">Svalbard and Jan Mayen</option>
+                            <option value="SZ">Swaziland</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SY">Syrian Arab Republic</option>
+                            <option value="TW">Taiwan, Province of China</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania, United Republic of</option>
+                            <option value="TH">Thailand</option>
+                            <option value="TL">Timor-Leste</option>
+                            <option value="TG">Togo</option>
+                            <option value="TK">Tokelau</option>
+                            <option value="TO">Tonga</option>
+                            <option value="TT">Trinidad and Tobago</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="TC">Turks and Caicos Islands</option>
+                            <option value="TV">Tuvalu</option>
+                            <option value="UG">Uganda</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="US" selected>United States</option>
+                            <option value="UM">United States Minor Outlying Islands</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VE">Venezuela, Bolivarian Republic of</option>
+                            <option value="VN">Viet Nam</option>
+                            <option value="VG">Virgin Islands, British</option>
+                            <option value="VI">Virgin Islands, U.S.</option>
+                            <option value="WF">Wallis and Futuna</option>
+                            <option value="EH">Western Sahara</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
+                        </select>
+
+                    </div>
+
+                </fieldset>
 
             </div>
-            <div>
 
-                <label for="emergencySt">Street Address</label>
-                <input id="emergencySt" type="text" placeholder="Contact Address" size="60">
+            <div id="emergencyContact">
 
-                <label for="emergencyCity">City</label>
-                <input id="emergencyCity" placeholder="City" type="text">
+                <fieldset>
+                    <legend>Emergency Contact Information</legend>
 
-                <label for="emergencyState">State</label>
-                <select id="emergencyState" name="emergencyState">
-                    <option value="AL">AL</option>
-                    <option value="AK">AK</option>
-                    <option value="AR">AR</option>
-                    <option value="AZ">AZ</option>
-                    <option value="CA">CA</option>
-                    <option value="CO">CO</option>
-                    <option value="CT">CT</option>
-                    <option value="DC">DC</option>
-                    <option value="DE">DE</option>
-                    <option value="FL">FL</option>
-                    <option value="GA">GA</option>
-                    <option value="HI">HI</option>
-                    <option value="IA">IA</option>
-                    <option value="ID">ID</option>
-                    <option value="IL">IL</option>
-                    <option value="IN">IN</option>
-                    <option value="KS">KS</option>
-                    <option value="KY">KY</option>
-                    <option value="LA">LA</option>
-                    <option value="MA">MA</option>
-                    <option value="MD">MD</option>
-                    <option value="ME">ME</option>
-                    <option value="MI">MI</option>
-                    <option value="MN">MN</option>
-                    <option value="MO">MO</option>
-                    <option value="MS">MS</option>
-                    <option value="MT">MT</option>
-                    <option value="NC">NC</option>
-                    <option value="NE">NE</option>
-                    <option value="NH">NH</option>
-                    <option value="NJ">NJ</option>
-                    <option value="NM">NM</option>
-                    <option value="NV">NV</option>
-                    <option value="NY">NY</option>
-                    <option value="ND">ND</option>
-                    <option value="OH">OH</option>
-                    <option value="OK">OK</option>
-                    <option value="OR">OR</option>
-                    <option value="PA">PA</option>
-                    <option value="RI">RI</option>
-                    <option value="SC">SC</option>
-                    <option value="SD">SD</option>
-                    <option value="TN">TN</option>
-                    <option value="TX" selected>TX</option>
-                    <option value="UT">UT</option>
-                    <option value="VT">VT</option>
-                    <option value="VA">VA</option>
-                    <option value="WA">WA</option>
-                    <option value="WI">WI</option>
-                    <option value="WV">WV</option>
-                    <option value="WY">WY</option>
-                </select>
+                    <div>
 
-                <label for="emergencyZip">ZIP Code</label>
-                <input id="emergencyZip" name="emergencyZip" type="text" size="5" maxlength="5">
+                        <label for="firstname2">First Name</label>
+                        <input id="firstname2" name="firstname2" type="text" placeholder="First Name">
 
-            </div>
-            <div>
+                        <label for="middlename2">Middle Name</label>
+                        <input id="middlename2" name="middlename2" type="text" placeholder="Middle Name">
 
-                <label for="email2">Email Address</label>
-                <input id="email2" type="email" placeholder="Email Address">
+                        <label for="lastname2">Last Name</label>
+                        <input id="lastname2" name="lastname2" type="text" placeholder="Last Name">
 
-                <label for="home2">Phone Number</label>
-                <input id="home2" type="text" placeholder="Phone Number" size="12">
+                    </div>
+                    <div>
 
-            </div>
+                        <label for="emergencySt">Street Address</label>
+                        <input id="emergencySt" name="emergencySt" type="text" placeholder="Contact Address" size="60">
 
-            </fieldset>
+                        <label for="emergencyCity">City</label>
+                        <input id="emergencyCity" name="emergencyCity" placeholder="City" type="text">
 
-        </div>
+                        <label for="emergencyState">State</label>
+                        <select id="emergencyState" name="emergencyState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
 
-        <div id="occupantInfo">
-            <fieldset>
-                <legend>Information about other occupants</legend>
+                        <label for="emergencyZip">ZIP Code</label>
+                        <input id="emergencyZip" name="emergencyZip" type="text" size="5" maxlength="5">
 
-                <div>
-                <!--name1-->
+                    </div>
+                    <div>
 
-                <label for="firstname3">First Name</label>
-                <input id="firstname3" type="text" placeholder="First Name">
+                        <label for="email2">Email Address</label>
+                        <input id="email2" name="email2" type="email" placeholder="Email Address">
 
-                <label for="lastname3">Last Name</label>
-                <input id="lastname3" type="text" placeholder="Last Name">
+                        <label for="home2">Phone Number</label>
+                        <input id="home2" name="home2" type="text" placeholder="Phone Number" size="12">
 
-                <!--relation1-->
+                    </div>
 
-                <label for="relationship1">Relationship</label>
-                <input id="relationship1" type="text" placeholder="Relationship">
-
-                <!--age1-->
-
-                <label for="age1">Age</label>
-                <input id="age1" type="text">
-
-                </div>
-                <div>
-
-                <!--name2-->
-
-                <label for="firstname4">First Name</label>
-                <input id="firstname4" type="text" placeholder="First Name">
-
-                <label for="lastname4">Last Name</label>
-                <input id="lastname4" type="text" placeholder="Last Name">
-
-                <!--relation2-->
-
-                <label for="relationship2">Relationship</label>
-                <input id="relationship2" type="text" placeholder="Relationship">
-
-                <!--age2-->
-
-                <label for="age2">Age</label>
-                <input id="age2" type="text">
-                </div>
-
-                <!--name3-->
-                <div>
-
-                <label for="firstname5">First Name</label>
-                <input id="firstname5" type="text" placeholder="First Name">
-
-                <label for="lastname5">Last Name</label>
-                <input id="lastname5" type="text" placeholder="Last Name">
-
-                <!--relation3-->
-
-                <label for="relationship3">Relationship</label>
-                <input id="relationship3" type="text" placeholder="Relationship">
-
-                <!--age3-->
-
-                <label for="age3">Age</label>
-                <input id="age3" type="text">
-                </div>
-
-
-            </fieldset>
-        </div>
-
-        <div id="applicantAddressDIV">
-
-            <fieldset>
-
-                <legend>Applicant Current Address</legend>
-
-            <div>
-
-                <label for="applicantAddress">Street Address</label>
-                <input id="applicantAddress" type="text" placeholder="Current Address" size="60" required>
-
-                <label for="applicantCity">City</label>
-                <input id="applicantCity" placeholder="City" type="text" required>
-
-                <label for="applicantState">State</label>
-                <select id="applicantState" name="applicantState">
-                    <option value="AL">AL</option>
-                    <option value="AK">AK</option>
-                    <option value="AR">AR</option>
-                    <option value="AZ">AZ</option>
-                    <option value="CA">CA</option>
-                    <option value="CO">CO</option>
-                    <option value="CT">CT</option>
-                    <option value="DC">DC</option>
-                    <option value="DE">DE</option>
-                    <option value="FL">FL</option>
-                    <option value="GA">GA</option>
-                    <option value="HI">HI</option>
-                    <option value="IA">IA</option>
-                    <option value="ID">ID</option>
-                    <option value="IL">IL</option>
-                    <option value="IN">IN</option>
-                    <option value="KS">KS</option>
-                    <option value="KY">KY</option>
-                    <option value="LA">LA</option>
-                    <option value="MA">MA</option>
-                    <option value="MD">MD</option>
-                    <option value="ME">ME</option>
-                    <option value="MI">MI</option>
-                    <option value="MN">MN</option>
-                    <option value="MO">MO</option>
-                    <option value="MS">MS</option>
-                    <option value="MT">MT</option>
-                    <option value="NC">NC</option>
-                    <option value="NE">NE</option>
-                    <option value="NH">NH</option>
-                    <option value="NJ">NJ</option>
-                    <option value="NM">NM</option>
-                    <option value="NV">NV</option>
-                    <option value="NY">NY</option>
-                    <option value="ND">ND</option>
-                    <option value="OH">OH</option>
-                    <option value="OK">OK</option>
-                    <option value="OR">OR</option>
-                    <option value="PA">PA</option>
-                    <option value="RI">RI</option>
-                    <option value="SC">SC</option>
-                    <option value="SD">SD</option>
-                    <option value="TN">TN</option>
-                    <option value="TX" selected>TX</option>
-                    <option value="UT">UT</option>
-                    <option value="VT">VT</option>
-                    <option value="VA">VA</option>
-                    <option value="WA">WA</option>
-                    <option value="WI">WI</option>
-                    <option value="WV">WV</option>
-                    <option value="WY">WY</option>
-                </select>
-
-                <label for="applicantZIP">ZIP Code</label>
-                <input id="applicantZIP" type="text" size="5" maxlength="5" required>
+                </fieldset>
 
             </div>
-            <div>
 
-                <!--
-                Take this and copy and paste to Previous Address Field
+            <div id="occupantInfo">
+                <fieldset>
+                    <legend>Information about other occupants</legend>
 
-                Or... this could be a new fieldset for landlord
-                -->
-                <label for="landlord1first">Landlord's First Name</label>
-                <input id="landlord1first" name="landlord1" type="text" required>
+                    <div>
+                        <!--name1-->
 
-                <label for="landlord1last">Landlord's Last Name</label>
-                <input id="landlord1last" name="landlord1last" type="text" required>
+                        <label for="firstname3">First Name</label>
+                        <input id="firstname3" name="firstname3" type="text" placeholder="First Name">
 
-                <label for="landlord1email">Email</label>
-                <input id="landlord1email" name="landlord1email" type="email">
+                        <label for="lastname3">Last Name</label>
+                        <input id="lastname3" name="lastname3" type="text" placeholder="Last Name">
+
+                        <!--relation1-->
+
+                        <label for="relationship1">Relationship</label>
+                        <input id="relationship1" name="relationship1" type="text" placeholder="Relationship">
+
+                        <!--age1-->
+
+                        <label for="age1">Age</label>
+                        <input id="age1" name="age1" type="text">
+
+                    </div>
+                    <div>
+
+                        <!--name2-->
+
+                        <label for="firstname4">First Name</label>
+                        <input id="firstname4" name="firstname4" type="text" placeholder="First Name">
+
+                        <label for="lastname4">Last Name</label>
+                        <input id="lastname4" name="lastname4" type="text" placeholder="Last Name">
+
+                        <!--relation2-->
+
+                        <label for="relationship2">Relationship</label>
+                        <input id="relationship2" name="relationship2" type="text" placeholder="Relationship">
+
+                        <!--age2-->
+
+                        <label for="age2">Age</label>
+                        <input id="age2" name="age2" type="text">
+                    </div>
+
+                    <!--name3-->
+                    <div>
+
+                        <label for="firstname5">First Name</label>
+                        <input id="firstname5" name="firstname5" type="text" placeholder="First Name">
+
+                        <label for="lastname5">Last Name</label>
+                        <input id="lastname5" name="lastname5" type="text" placeholder="Last Name">
+
+                        <!--relation3-->
+
+                        <label for="relationship3">Relationship</label>
+                        <input id="relationship3" name="relationship3" type="text" placeholder="Relationship">
+
+                        <!--age3-->
+
+                        <label for="age3">Age</label>
+                        <input id="age3" name=3 type="text">
+                    </div>
+
+
+                </fieldset>
+            </div>
+
+            <div id="applicantAddressDIV">
+
+                <fieldset>
+
+                    <legend>Applicant Current Address</legend>
+
+                    <div>
+
+                        <label for="applicantAddress">Street Address</label>
+                        <input id="applicantAddress" type="text" placeholder="Current Address" size="60" required>
+
+                        <label for="applicantCity">City</label>
+                        <input id="applicantCity" placeholder="City" type="text" required>
+
+                        <label for="applicantState">State</label>
+                        <select id="applicantState" name="applicantState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="applicantZIP">ZIP Code</label>
+                        <input id="applicantZIP" name="applicantZIP" type="text" size="5" maxlength="5" required>
+
+                    </div>
+                    <div>
+
+                        <!--
+                        Take this and copy and paste to Previous Address Field
+
+                        Or... this could be a new fieldset for landlord
+                        -->
+                        <label for="landlord1first">Landlord's First Name</label>
+                        <input id="landlord1first" name="landlord1" type="text" required>
+
+                        <label for="landlord1last">Landlord's Last Name</label>
+                        <input id="landlord1last" name="landlord1last" type="text" required>
+
+                        <label for="landlord1email">Email</label>
+                        <input id="landlord1email" name="landlord1email" type="email">
+
+                    </div>
+                    <div>
+
+                        <label for="landlord1dayphone">Daytime Phone</label>
+                        <input id="landlord1dayphone" name="landlord1dayphone" type="text" size="12" required>
+
+                        <label for="landlord1nightphone">Night-time Phone</label>
+                        <input id="landlord1nightphone" name="landlord1nightphone" type="text" size="12" required>
+
+                        <label for="landlord1fax">Fax</label>
+                        <input id="landlord1fax" name="landlord1fax" type="text" size="12">
+
+                    </div>
+                    <div>
+
+                        <label for="previousMovein1">Move-In Date</label>
+                        <input id="previousMovein1" name="previousMovein1" type="date" required>
+
+                        <label for="previousMoveout1">Move-Out Date</label>
+                        <input id="previousMoveout1" name="previousMoveout1" type="date" required>
+
+                        <label for="previousRent1">Monthly Rent (Enter amount)   $</label>
+                        <input id="previousRent1" name="previousRent1" type="text" size="4" required>
+
+                    </div>
+                    <div>
+                        <label for="previousMoveReason1">Reason for leaving:</label>
+                        <textarea name="previousMoveReason1" class="moveReason" id="previousMoveReason1" cols="80" rows="4"></textarea> <!-- find a way to stretch the textareas all the way across the screen -->
+                    </div>
+                </fieldset>
 
             </div>
-            <div>
 
-                <label for="landlord1dayphone">Daytime Phone</label>
-                <input id="landlord1dayphone" name="landlord1dayphone" type="text" size="12" required>
+            <div id="applicantPreviousAddressDIV">
+                <fieldset>
+                    <legend>Previous Address</legend>
 
-                <label for="landlord1nightphone">Night-time Phone</label>
-                <input id="landlord1nightphone" name="landlord1nightphone" type="text" size="12" required>
+                    <div>
 
-                <label for="landlord1fax">Fax</label>
-                <input id="landlord1fax" name="landlord1fax" type="text" size="12">
+                        <label for="applicantPreviousAddress">Street Address</label>
+                        <input id="applicantPreviousAddress" type="text" placeholder="Previous Address" size="60" required>
+
+                        <label for="applicantPreviousCity">City</label>
+                        <input id="applicantPreviousCity" placeholder="City" type="text" required>
+
+                        <label for="applicantPreviousState">State</label>
+                        <select id="applicantPreviousState" name="applicantPreviousState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="applicantPreviousZIP">ZIP Code</label>
+                        <input id="applicantPreviousZIP" type="text" size="5" maxlength="5" required>
+
+                    </div>
+                    <div>
+
+                        <label for="landlord2first">Landlord's First Name</label>
+                        <input id="landlord2first" name="landlord2" type="text" required>
+
+                        <label for="landlord2last">Landlord's Last Name</label>
+                        <input id="landlord2last" name="landlord2last" type="text" required>
+
+                        <label for="landlord2email">Email</label>
+                        <input id="landlord2email" name="landlord2email" type="email">
+
+                    </div>
+                    <div>
+
+                        <label for="landlord2dayphone">Daytime Phone</label>
+                        <input id="landlord2dayphone" name="landlord2dayphone" type="text" size="12" required>
+
+                        <label for="landlord2nightphone">Night-time Phone</label>
+                        <input id="landlord2nightphone" name="landlord2nightphone" type="text" size="12" required>
+
+                        <label for="landlord2fax">Fax</label>
+                        <input id="landlord2fax" name="landlord2fax" type="text" size="12">
+
+                    </div>
+
+                    <div>
+
+                        <label for="previousMovein2">Move-In Date</label>
+                        <input id="previousMovein2" name="previousMovein2" type="date" required>
+
+                        <label for="previousMoveout2">Move-Out Date</label>
+                        <input id="previousMoveout2" name="previousMoveout2" type="date" required>
+
+                        <label for="previousRent2">Monthly Rent (Enter amount)   $</label>
+                        <input id="previousRent2" type="text" size="4" required>
+
+                    </div>
+                    <div>
+
+                        <label for="previousMoveReason2">Reason for leaving:</label>
+                        <textarea class="moveReason" name="previousMoveReason2" id="previousMoveReason2" cols="80" rows="4"></textarea>
+                        </label><!-- find a way to stretch the textareas all the way across the screen -->
+
+                    </div>
+
+
+                </fieldset>
 
             </div>
-            <div>
 
-                <label for="previousMovein1">Move-In Date</label>
-                <input id="previousMovein1" name="previousMovein1" type="date" required>
+            <div id="applicantEmployment">
 
-                <label for="previousMoveout1">Move-In Date</label>
-                <input id="previousMoveout1" name="previousMoveout1" type="date" required>
+                <fieldset>
+                    <legend>Employment Information</legend>
 
-                <label for="previousRent1">Monthly Rent (Enter amount)   $</label>
-                <input id="previousRent1" type="text" size="4" required>
+                    <div>
+                        <label for="applicantEmployer">Employer</label>
+                        <input id="applicantEmployer" name="applicantEmployer" type="text" required>
+
+                        <label for="applicantEmployerAddress">Address</label>
+                        <input id="applicantEmployerAddress" name="applicantEmployerAddress" type="text" size="60" required>
+
+                        <label for="applicantEmployerCity">City</label>
+                        <input id="applicantEmployerCity" placeholder="City" type="text">
+
+                        <label for="applicantEmployerState">State</label>
+                        <select id="applicantEmployerState" name="applicantEmployerState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="applicantEmployerZIP">ZIP Code</label>
+                        <input id="applicantEmployerZIP" name="applicantEmployerZIP" type="text" size="5" maxlength="5">
+
+                    </div>
+                    <div>
+                        <label for="applicantEmployerFirstName">Supervisor's First Name</label>
+                        <input id="applicantEmployerFirstName" name="applicantEmployerFirstName" type="text" required>
+
+                        <label for="applicantEmployerLastName">Supervisor's Last Name</label>
+                        <input id="applicantEmployerLastName" name="applicantEmployerLastName" type="text" required>
+
+                        <label for="applicantEmployerPhone">Phone Number</label>
+                        <input id="applicantEmployerPhone" type="text" placeholder="Phone Number" size="12" required>
+
+                        <label for="applicantEmployerFax">Fax</label>
+                        <input id="applicantEmployerFax" name="applicantEmployerFax" type="text" size="12">
+
+                        <label for="applicantEmployerEmail">Email</label>
+                        <input id="applicantEmployerEmail" name="applicantEmployerEmail" type="email">
+
+                    </div>
+                    <div>
+
+                        <label for="applicantEmployerStart">Start Date</label>
+                        <input id="applicantEmployerStart" name="applicantEmployerStart" type="date" required>
+
+                        <label for="applicantMonthlyIncome">Monthly Income (Enter amount)   $</label>
+                        <input id="applicantMonthlyIncome" type="number" size="4" required>
+
+                        <label for="applicantEmployerPosition">Position</label>
+                        <input id="applicantEmployerPosition" name="applicantEmployerPosition" type="text" required>
+
+                    </div>
+
+                </fieldset>
+
 
             </div>
-            <div>
-                <label for="previousMoveReason1">Reason for leaving:</label>
-                <textarea name="previousMoveReason1" id="previousMoveReason1" cols="80" rows="4"></textarea> <!-- find a way to stretch the textareas all the way across the screen -->
+
+            <div class="legal" id="legalDisclaimer">
+                <p>&copy;Texas Association of REALTORS&copy; Inc. 2007</p>
+                <p>Use of this form by persons who are not members of the Texas Association of Realtors is not authorized.</p>
             </div>
-            </fieldset>
 
-        </div>
+            <div id="buttonArea">
+                <button>Submit The Application</button>
+            </div>
 
-        <div id="applicantPreviousAddressDIV">
-            <fieldset>
-                <legend>Previous Address</legend>
+        </form>
+    </div>
 
-                <div>
+    <div id="test">
+        <header>
+            <div>
+                <h1>Texas Association of Realtors</h1>
+            </div>
 
-                    <label for="applicantPreviousAddress">Street Address</label>
-                    <input id="applicantPreviousAddress" type="text" placeholder="Current Address" size="60" required>
+            <div>
+                <h2>Online Residential Lease Application</h2>
+            </div>
+        </header>
 
-                    <label for="applicantPreviousCity">City</label>
-                    <input id="applicantPreviousCity" placeholder="City" type="text" required>
+        <form method="post" action="https://hookb.in/vyx91JNG">
 
-                    <label for="applicantPreviousState">State</label>
-                    <select id="applicantPreviousState" name="applicantPreviousState">
-                        <option value="AL">AL</option>
-                        <option value="AK">AK</option>
-                        <option value="AR">AR</option>
-                        <option value="AZ">AZ</option>
-                        <option value="CA">CA</option>
-                        <option value="CO">CO</option>
-                        <option value="CT">CT</option>
-                        <option value="DC">DC</option>
-                        <option value="DE">DE</option>
-                        <option value="FL">FL</option>
-                        <option value="GA">GA</option>
-                        <option value="HI">HI</option>
-                        <option value="IA">IA</option>
-                        <option value="ID">ID</option>
-                        <option value="IL">IL</option>
-                        <option value="IN">IN</option>
-                        <option value="KS">KS</option>
-                        <option value="KY">KY</option>
-                        <option value="LA">LA</option>
-                        <option value="MA">MA</option>
-                        <option value="MD">MD</option>
-                        <option value="ME">ME</option>
-                        <option value="MI">MI</option>
-                        <option value="MN">MN</option>
-                        <option value="MO">MO</option>
-                        <option value="MS">MS</option>
-                        <option value="MT">MT</option>
-                        <option value="NC">NC</option>
-                        <option value="NE">NE</option>
-                        <option value="NH">NH</option>
-                        <option value="NJ">NJ</option>
-                        <option value="NM">NM</option>
-                        <option value="NV">NV</option>
-                        <option value="NY">NY</option>
-                        <option value="ND">ND</option>
-                        <option value="OH">OH</option>
-                        <option value="OK">OK</option>
-                        <option value="OR">OR</option>
-                        <option value="PA">PA</option>
-                        <option value="RI">RI</option>
-                        <option value="SC">SC</option>
-                        <option value="SD">SD</option>
-                        <option value="TN">TN</option>
-                        <option value="TX" selected>TX</option>
-                        <option value="UT">UT</option>
-                        <option value="VT">VT</option>
-                        <option value="VA">VA</option>
-                        <option value="WA">WA</option>
-                        <option value="WI">WI</option>
-                        <option value="WV">WV</option>
-                        <option value="WY">WY</option>
-                    </select>
+            <div id="propertyInfo">
+                <fieldset>
+                    <legend>Property Information</legend>
+                    <div class="field">
 
-                    <label for="applicantPreviousZIP">ZIP Code</label>
-                    <input id="applicantPreviousZIP" type="text" size="5" maxlength="5" required>
+                        <label for="propertyStreet">Property Street Address</label>
+                        <input id="propertyStreet" type="text" name="propertyStreet" placeholder="Property Address" size="45" required>
 
-                </div>
-                <div>
+                        <label for="propertyCity">City</label>
+                        <input id="propertyCity" placeholder="City" type="text" name="propertyCity" required>
 
-                    <label for="landlord2first">Landlord's First Name</label>
-                    <input id="landlord2first" name="landlord2" type="text" required>
+                        <label for="propertyState">State</label>
+                        <select id="propertyState" name="propertyState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
 
-                    <label for="landlord2last">Landlord's Last Name</label>
-                    <input id="landlord2last" name="landlord2last" type="text" required>
+                        <label for="propertyZipCode">ZIP Code</label>
+                        <input id="propertyZipCode" type="text" size="5" maxlength="5" name="propertyZipCode" required>
 
-                    <label for="landlord2email">Email</label>
-                    <input id="landlord2email" name="landlord2email" type="email">
+                    </div>
+                    <div>
 
-                </div>
-                <div>
+                        <label for="moveinDate">Anticipated Move-in Date</label>
+                        <input id="moveinDate" type="date" name="moveinDate" required>
 
-                    <label for="landlord2dayphone">Daytime Phone</label>
-                    <input id="landlord2dayphone" name="landlord2dayphone" type="text" size="12" required>
+                        <label for="monthlyRate">Monthly Rent (Enter amount)   $</label>
+                        <input id="monthlyRate" type="number" size="4" name="monthlyRate" name="monthlyRate" required>
 
-                    <label for="landlord2nightphone">Night-time Phone</label>
-                    <input id="landlord2nightphone" name="landlord2nightphone" type="text" size="12" required>
+                        <label for="securityDeposit">Security Deposit (Enter amount)   $</label>
+                        <input id="securityDeposit" type="number" size="4" name="securityDeposit" required>
 
-                    <label for="landlord2fax">Fax</label>
-                    <input id="landlord2fax" name="landlord2fax" type="text" size="12">
+                    </div>
+                    <div>
 
-                </div>
+                        <label for="landlordReferral">Applicant was referred to landlord by:</label>
+                        <select name="landlordReferral" id="landlordReferral">
+                            <option value="agent">Real Estate Agent</option>
+                            <option value="newspaper">Newspaper</option>
+                            <option value="sign">Sign</option>
+                            <option value="internet">Internet</option>
+                            <option value="other">Other</option>
+                        </select>
 
-                <div>
+                    </div>
 
-                    <label for="previousMovein2">Move-In Date</label>
-                    <input id="previousMovein2" name="previousMovein2" type="date" required>
+                </fieldset>
 
-                    <label for="previousMoveout2">Move-In Date</label>
-                    <input id="previousMoveout2" name="previousMoveout2" type="date" required>
+            </div>
 
-                    <label for="previousRent2">Monthly Rent (Enter amount)   $</label>
-                    <input id="previousRent2" type="text" size="4" required>
+            <div id="applicantInfo">
+                <fieldset>
 
-                    <label for="previousMoveReason2">Reason for leaving:</label>
-                    <textarea name="previousMoveReason2" id="previousMoveReason2" cols="80" rows="4"></textarea> <!-- find a way to stretch the textareas all the way across the screen -->
+                    <legend>Applicant Information</legend>
 
-                </div>
+                    <div>
+
+                        <label for="firstname1">First Name</label>
+                        <input id="firstname1" name="firstname1" type="text" placeholder="First Name" required>
+
+                        <label for="middlename1">Middle Name</label>
+                        <input id="middlename1" name="middlename1" type="text" placeholder="Middle Name">
+
+                        <label for="lastname1">Last Name</label>
+                        <input id="lastname1" name="lastname1" type="text" placeholder="Last Name" required>
+
+                        <label for="maidenname1">Maiden Name</label>
+                        <input id="maidenname1" name="maidenname1" type="text" placeholder="Maiden Name">
+
+                        <label for="coapplicantVerify">Check if there is a co-applicant</label>
+                        <input id="coapplicantVerify" type="checkbox">
+
+                    </div>
+                    <div>
+
+                        <label for="email1">Email Address</label>
+                        <input id="email1" type="email" placeholder="Email Address">
+
+                        <label for="home1">Home Number</label>
+                        <input id="home1" type="text" placeholder="Home Number" size="10" required>
+
+                        <label for="work1">Work Number</label>
+                        <input id="work1" type="text" placeholder="Work Number" size="10">
+
+                        <label for="mobile1">Mobile Number</label>
+                        <input id="mobile1" type="text" placeholder="Mobile Number" size="10">
+
+                    </div>
+                    <div>
+
+                        <label for="ssn1">Social Security Number</label>
+                        <input id="ssn1" type="text" placeholder="Social Security Number" required size="9">
+
+                        <label for="license1">Driver License Number</label>
+                        <input id="license1" type="number" placeholder="Driver License Number" required>
+
+                        <label for="license1state">State</label>
+                        <select id="license1state" name="license1state">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="dob1">Date of Birth</label>
+                        <input id="dob1" type="date" required>
+
+                    </div>
+                    <div>
+
+                        <label for="height1a">Height
+                            <input id="height1a" type="text" size="1" required >ft
+                            <input id="height1b" type="text" required size="2">in</label>
+
+                        <label for="weight1">Weight
+                            <input id="weight1" type="text" required size="3"> lbs.</label>
+
+                        <label for="eyecolor1">Eye Color</label>
+                        <select id="eyecolor1" name="eyecolor1" required>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="brown">Brown</option>
+                            <option value="gray">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="hazel">Hazel</option>
+                            <option value="multi">Multicolored</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="maritalstat1"></label>Marital Status
+                        <select name="maritalstat1" id="maritalstat1" required>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widow">Widow/Widower</option>
+                        </select>
+
+                        <label for="citizenship1">Citizenship</label>
+                        <select name="citizenship1" id="citizenship1" required>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AQ">Antarctica</option>
+                            <option value="AG">Antigua and Barbuda</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AW">Aruba</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BM">Bermuda</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia, Plurinational State of</option>
+                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BV">Bouvet Island</option>
+                            <option value="BR">Brazil</option>
+                            <option value="IO">British Indian Ocean Territory</option>
+                            <option value="BN">Brunei Darussalam</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="CA">Canada</option>
+                            <option value="CV">Cape Verde</option>
+                            <option value="KY">Cayman Islands</option>
+                            <option value="CF">Central African Republic</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CX">Christmas Island</option>
+                            <option value="CC">Cocos (Keeling) Islands</option>
+                            <option value="CO">Colombia</option>
+                            <option value="KM">Comoros</option>
+                            <option value="CG">Congo</option>
+                            <option value="CD">Congo, the Democratic Republic of the</option>
+                            <option value="CK">Cook Islands</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="CI">Côte d'Ivoire</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CW">Curaçao</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DM">Dominica</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="EG">Egypt</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GQ">Equatorial Guinea</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FK">Falkland Islands (Malvinas)</option>
+                            <option value="FO">Faroe Islands</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GF">French Guiana</option>
+                            <option value="PF">French Polynesia</option>
+                            <option value="TF">French Southern Territories</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GM">Gambia</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Greece</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GD">Grenada</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="GU">Guam</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GG">Guernsey</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="HM">Heard Island and McDonald Islands</option>
+                            <option value="VA">Holy See (Vatican City State)</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IR">Iran, Islamic Republic of</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IM">Isle of Man</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="JE">Jersey</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KI">Kiribati</option>
+                            <option value="KP">Korea, Democratic People's Republic of</option>
+                            <option value="KR">Korea, Republic of</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Lao People's Democratic Republic</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libya</option>
+                            <option value="LI">Liechtenstein</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MO">Macao</option>
+                            <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MV">Maldives</option>
+                            <option value="ML">Mali</option>
+                            <option value="MT">Malta</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MU">Mauritius</option>
+                            <option value="YT">Mayotte</option>
+                            <option value="MX">Mexico</option>
+                            <option value="FM">Micronesia, Federated States of</option>
+                            <option value="MD">Moldova, Republic of</option>
+                            <option value="MC">Monaco</option>
+                            <option value="MN">Mongolia</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MS">Montserrat</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NR">Nauru</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="NU">Niue</option>
+                            <option value="NF">Norfolk Island</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="NO">Norway</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PW">Palau</option>
+                            <option value="PS">Palestinian Territory, Occupied</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PN">Pitcairn</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="RE">Réunion</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russian Federation</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="BL">Saint Barthélemy</option>
+                            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                            <option value="KN">Saint Kitts and Nevis</option>
+                            <option value="LC">Saint Lucia</option>
+                            <option value="MF">Saint Martin (French part)</option>
+                            <option value="PM">Saint Pierre and Miquelon</option>
+                            <option value="VC">Saint Vincent and the Grenadines</option>
+                            <option value="WS">Samoa</option>
+                            <option value="SM">San Marino</option>
+                            <option value="ST">Sao Tome and Principe</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="SC">Seychelles</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SX">Sint Maarten (Dutch part)</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SB">Solomon Islands</option>
+                            <option value="SO">Somalia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                            <option value="SS">South Sudan</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SD">Sudan</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SJ">Svalbard and Jan Mayen</option>
+                            <option value="SZ">Swaziland</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SY">Syrian Arab Republic</option>
+                            <option value="TW">Taiwan, Province of China</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania, United Republic of</option>
+                            <option value="TH">Thailand</option>
+                            <option value="TL">Timor-Leste</option>
+                            <option value="TG">Togo</option>
+                            <option value="TK">Tokelau</option>
+                            <option value="TO">Tonga</option>
+                            <option value="TT">Trinidad and Tobago</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="TC">Turks and Caicos Islands</option>
+                            <option value="TV">Tuvalu</option>
+                            <option value="UG">Uganda</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="US" selected>United States</option>
+                            <option value="UM">United States Minor Outlying Islands</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VE">Venezuela, Bolivarian Republic of</option>
+                            <option value="VN">Viet Nam</option>
+                            <option value="VG">Virgin Islands, British</option>
+                            <option value="VI">Virgin Islands, U.S.</option>
+                            <option value="WF">Wallis and Futuna</option>
+                            <option value="EH">Western Sahara</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
+                        </select>
+
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+            <div id="emergencyContact">
+
+                <fieldset>
+                    <legend>Emergency Contact Information</legend>
+
+                    <div>
+
+                        <label for="firstname2">First Name</label>
+                        <input id="firstname2" name="firstname2" type="text" placeholder="First Name">
+
+                        <label for="middlename2" Middle Name></label>
+                        <input id="middlename2" name="middlename2" type="text" placeholder="Middle Name">
+
+                        <label for="lastname2">Last Name</label>
+                        <input id="lastname2" name="lastname2" type="text" placeholder="Last Name">
+
+                    </div>
+                    <div>
+
+                        <label for="emergencySt">Street Address</label>
+                        <input id="emergencySt" name="emergencySt" type="text" placeholder="Contact Address" size="60">
+
+                        <label for="emergencyCity">City</label>
+                        <input id="emergencyCity" name="emergencyCity" placeholder="City" type="text">
+
+                        <label for="emergencyState">State</label>
+                        <select id="emergencyState" name="emergencyState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="emergencyZip">ZIP Code</label>
+                        <input id="emergencyZip" name="emergencyZip" type="text" size="5" maxlength="5">
+
+                    </div>
+                    <div>
+
+                        <label for="email2">Email Address</label>
+                        <input id="email2" name="email2" type="email" placeholder="Email Address">
+
+                        <label for="home2">Phone Number</label>
+                        <input id="home2" name="home2" type="text" placeholder="Phone Number" size="12">
+
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+            <div id="occupantInfo">
+                <fieldset>
+                    <legend>Information about other occupants</legend>
+
+                    <div>
+                        <!--name1-->
+
+                        <label for="firstname3">First Name</label>
+                        <input id="firstname3" name="firstname3" type="text" placeholder="First Name">
+
+                        <label for="lastname3">Last Name</label>
+                        <input id="lastname3" name="lastname3" type="text" placeholder="Last Name">
+
+                        <!--relation1-->
+
+                        <label for="relationship1">Relationship</label>
+                        <input id="relationship1" name="relationship1" type="text" placeholder="Relationship">
+
+                        <!--age1-->
+
+                        <label for="age1">Age</label>
+                        <input id="age1" name="age1" type="text">
+
+                    </div>
+                    <div>
+
+                        <!--name2-->
+
+                        <label for="firstname4">First Name</label>
+                        <input id="firstname4" name="firstname4" type="text" placeholder="First Name">
+
+                        <label for="lastname4">Last Name</label>
+                        <input id="lastname4" name="lastname4" type="text" placeholder="Last Name">
+
+                        <!--relation2-->
+
+                        <label for="relationship2">Relationship</label>
+                        <input id="relationship2" name="relationship2" type="text" placeholder="Relationship">
+
+                        <!--age2-->
+
+                        <label for="age2">Age</label>
+                        <input id="age2" name="age2" type="text">
+                    </div>
+
+                    <!--name3-->
+                    <div>
+
+                        <label for="firstname5">First Name</label>
+                        <input id="firstname5" name="firstname5" type="text" placeholder="First Name">
+
+                        <label for="lastname5">Last Name</label>
+                        <input id="lastname5" name="lastname5" type="text" placeholder="Last Name">
+
+                        <!--relation3-->
+
+                        <label for="relationship3">Relationship</label>
+                        <input id="relationship3" name="relationship3" type="text" placeholder="Relationship">
+
+                        <!--age3-->
+
+                        <label for="age3">Age</label>
+                        <input id="age3" name=3 type="text">
+                    </div>
 
 
-            </fieldset>
+                </fieldset>
+            </div>
 
-        </div>
+            <div id="applicantAddressDIV">
 
-        <div id="applicantEmployment">
+                <fieldset>
 
-            <fieldset>
-                <legend>Employment Information</legend>
+                    <legend>Applicant Current Address</legend>
 
-                <div>
-                    <label for="applicantEmployer">Employer</label>
-                    <input id="applicantEmployer" name="applicantEmployer" type="text" required>
+                    <div>
 
-                    <label for="applicantEmployerAddress">Address</label>
-                    <input id="applicantEmployerAddress" name="applicantEmployerAddress" type="text" size="60" required>
+                        <label for="applicantAddress">Street Address</label>
+                        <input id="applicantAddress" type="text" placeholder="Current Address" size="60" required>
 
-                    <label for="applicantEmployerCity">City</label>
-                    <input id="applicantEmployerCity" placeholder="City" type="text">
+                        <label for="applicantCity">City</label>
+                        <input id="applicantCity" placeholder="City" type="text" required>
 
-                    <label for="applicantEmployerState">State</label>
-                    <select id="applicantEmployerState" name="applicantEmployerState">
-                        <option value="AL">AL</option>
-                        <option value="AK">AK</option>
-                        <option value="AR">AR</option>
-                        <option value="AZ">AZ</option>
-                        <option value="CA">CA</option>
-                        <option value="CO">CO</option>
-                        <option value="CT">CT</option>
-                        <option value="DC">DC</option>
-                        <option value="DE">DE</option>
-                        <option value="FL">FL</option>
-                        <option value="GA">GA</option>
-                        <option value="HI">HI</option>
-                        <option value="IA">IA</option>
-                        <option value="ID">ID</option>
-                        <option value="IL">IL</option>
-                        <option value="IN">IN</option>
-                        <option value="KS">KS</option>
-                        <option value="KY">KY</option>
-                        <option value="LA">LA</option>
-                        <option value="MA">MA</option>
-                        <option value="MD">MD</option>
-                        <option value="ME">ME</option>
-                        <option value="MI">MI</option>
-                        <option value="MN">MN</option>
-                        <option value="MO">MO</option>
-                        <option value="MS">MS</option>
-                        <option value="MT">MT</option>
-                        <option value="NC">NC</option>
-                        <option value="NE">NE</option>
-                        <option value="NH">NH</option>
-                        <option value="NJ">NJ</option>
-                        <option value="NM">NM</option>
-                        <option value="NV">NV</option>
-                        <option value="NY">NY</option>
-                        <option value="ND">ND</option>
-                        <option value="OH">OH</option>
-                        <option value="OK">OK</option>
-                        <option value="OR">OR</option>
-                        <option value="PA">PA</option>
-                        <option value="RI">RI</option>
-                        <option value="SC">SC</option>
-                        <option value="SD">SD</option>
-                        <option value="TN">TN</option>
-                        <option value="TX" selected>TX</option>
-                        <option value="UT">UT</option>
-                        <option value="VT">VT</option>
-                        <option value="VA">VA</option>
-                        <option value="WA">WA</option>
-                        <option value="WI">WI</option>
-                        <option value="WV">WV</option>
-                        <option value="WY">WY</option>
-                    </select>
+                        <label for="applicantState">State</label>
+                        <select id="applicantState" name="applicantState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
 
-                    <label for="applicantEmployerZIP">ZIP Code</label>
-                    <input id="applicantEmployerZIP" name="applicantEmployerZIP" type="text" size="5" maxlength="5">
+                        <label for="applicantZIP">ZIP Code</label>
+                        <input id="applicantZIP" name="applicantZIP" type="text" size="5" maxlength="5" required>
 
-                </div>
-                <div>
-                    <label for="applicantEmployerFirstName">Supervisor's First Name</label>
-                    <input id="applicantEmployerFirstName" name="applicantEmployerFirstName" type="text" required>
+                    </div>
+                    <div>
 
-                    <label for="applicantEmployerLastName">Supervisor's Last Name</label>
-                    <input id="applicantEmployerLastName" name="applicantEmployerLastName" type="text" required>
+                        <!--
+                        Take this and copy and paste to Previous Address Field
 
-                    <label for="applicantEmployerPhone">Phone Number</label>
-                    <input id="applicantEmployerPhone" type="text" placeholder="Phone Number" size="12" required>
+                        Or... this could be a new fieldset for landlord
+                        -->
+                        <label for="landlord1first">Landlord's First Name</label>
+                        <input id="landlord1first" name="landlord1" type="text" required>
 
-                    <label for="applicantEmployerFax">Fax</label>
-                    <input id="applicantEmployerFax" name="applicantEmployerFax" type="text" size="12">
+                        <label for="landlord1last">Landlord's Last Name</label>
+                        <input id="landlord1last" name="landlord1last" type="text" required>
 
-                    <label for="applicantEmployerEmail">Email</label>
-                    <input id="applicantEmployerEmail" name="applicantEmployerEmail" type="email">
+                        <label for="landlord1email">Email</label>
+                        <input id="landlord1email" name="landlord1email" type="email">
 
-                </div>
-                <div>
+                    </div>
+                    <div>
 
-                    <label for="applicantEmployerStart">Start Date</label>
-                    <input id="applicantEmployerStart" name="applicantEmployerStart" type="date" required>
+                        <label for="landlord1dayphone">Daytime Phone</label>
+                        <input id="landlord1dayphone" name="landlord1dayphone" type="text" size="12" required>
 
-                    <label for="applicantMonthlyIncome">Monthly Income (Enter amount)   $</label>
-                    <input id="applicantMonthlyIncome" type="number" size="4" required>
+                        <label for="landlord1nightphone">Night-time Phone</label>
+                        <input id="landlord1nightphone" name="landlord1nightphone" type="text" size="12" required>
 
-                    <label for="applicantEmployerPosition">Position</label>
-                    <input id="applicantEmployerPosition" name="applicantEmployerPosition" type="text" required>
+                        <label for="landlord1fax">Fax</label>
+                        <input id="landlord1fax" name="landlord1fax" type="text" size="12">
 
-                </div>
+                    </div>
+                    <div>
 
-            </fieldset>
+                        <label for="previousMovein1">Move-In Date</label>
+                        <input id="previousMovein1" name="previousMovein1" type="date" required>
+
+                        <label for="previousMoveout1">Move-Out Date</label>
+                        <input id="previousMoveout1" name="previousMoveout1" type="date" required>
+
+                        <label for="previousRent1">Monthly Rent (Enter amount)   $</label>
+                        <input id="previousRent1" name="previousRent1" type="text" size="4" required>
+
+                    </div>
+                    <div>
+                        <label for="previousMoveReason1">Reason for leaving:</label>
+                        <textarea name="previousMoveReason1" class="moveReason" id="previousMoveReason1" cols="80" rows="4"></textarea> <!-- find a way to stretch the textareas all the way across the screen -->
+                    </div>
+                </fieldset>
+
+            </div>
+
+            <div id="applicantPreviousAddressDIV">
+                <fieldset>
+                    <legend>Previous Address</legend>
+
+                    <div>
+
+                        <label for="applicantPreviousAddress">Street Address</label>
+                        <input id="applicantPreviousAddress" type="text" placeholder="Previous Address" size="60" required>
+
+                        <label for="applicantPreviousCity">City</label>
+                        <input id="applicantPreviousCity" placeholder="City" type="text" required>
+
+                        <label for="applicantPreviousState">State</label>
+                        <select id="applicantPreviousState" name="applicantPreviousState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="applicantPreviousZIP">ZIP Code</label>
+                        <input id="applicantPreviousZIP" type="text" size="5" maxlength="5" required>
+
+                    </div>
+                    <div>
+
+                        <label for="landlord2first">Landlord's First Name</label>
+                        <input id="landlord2first" name="landlord2" type="text" required>
+
+                        <label for="landlord2last">Landlord's Last Name</label>
+                        <input id="landlord2last" name="landlord2last" type="text" required>
+
+                        <label for="landlord2email">Email</label>
+                        <input id="landlord2email" name="landlord2email" type="email">
+
+                    </div>
+                    <div>
+
+                        <label for="landlord2dayphone">Daytime Phone</label>
+                        <input id="landlord2dayphone" name="landlord2dayphone" type="text" size="12" required>
+
+                        <label for="landlord2nightphone">Night-time Phone</label>
+                        <input id="landlord2nightphone" name="landlord2nightphone" type="text" size="12" required>
+
+                        <label for="landlord2fax">Fax</label>
+                        <input id="landlord2fax" name="landlord2fax" type="text" size="12">
+
+                    </div>
+
+                    <div>
+
+                        <label for="previousMovein2">Move-In Date</label>
+                        <input id="previousMovein2" name="previousMovein2" type="date" required>
+
+                        <label for="previousMoveout2">Move-Out Date</label>
+                        <input id="previousMoveout2" name="previousMoveout2" type="date" required>
+
+                        <label for="previousRent2">Monthly Rent (Enter amount)   $</label>
+                        <input id="previousRent2" type="text" size="4" required>
+
+                    </div>
+                    <div>
+
+                        <label for="previousMoveReason2">Reason for leaving:</label>
+                        <textarea class="moveReason" name="previousMoveReason2" id="previousMoveReason2" cols="80" rows="4"></textarea>
+                        </label><!-- find a way to stretch the textareas all the way across the screen -->
+
+                    </div>
 
 
-        </div>
+                </fieldset>
 
-        <div id="legalDisclaimer">
+            </div>
 
-        </div>
+            <div id="applicantEmployment">
 
-        <div id="buttonArea">
-            <button>Submit The Application</button>
-        </div>
+                <fieldset>
+                    <legend>Employment Information</legend>
 
-    </form>
+                    <div>
+                        <label for="applicantEmployer">Employer</label>
+                        <input id="applicantEmployer" name="applicantEmployer" type="text" required>
+
+                        <label for="applicantEmployerAddress">Address</label>
+                        <input id="applicantEmployerAddress" name="applicantEmployerAddress" type="text" size="60" required>
+
+                        <label for="applicantEmployerCity">City</label>
+                        <input id="applicantEmployerCity" placeholder="City" type="text">
+
+                        <label for="applicantEmployerState">State</label>
+                        <select id="applicantEmployerState" name="applicantEmployerState">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="applicantEmployerZIP">ZIP Code</label>
+                        <input id="applicantEmployerZIP" name="applicantEmployerZIP" type="text" size="5" maxlength="5">
+
+                    </div>
+                    <div>
+                        <label for="applicantEmployerFirstName">Supervisor's First Name</label>
+                        <input id="applicantEmployerFirstName" name="applicantEmployerFirstName" type="text" required>
+
+                        <label for="applicantEmployerLastName">Supervisor's Last Name</label>
+                        <input id="applicantEmployerLastName" name="applicantEmployerLastName" type="text" required>
+
+                        <label for="applicantEmployerPhone">Phone Number</label>
+                        <input id="applicantEmployerPhone" type="text" placeholder="Phone Number" size="12" required>
+
+                        <label for="applicantEmployerFax">Fax</label>
+                        <input id="applicantEmployerFax" name="applicantEmployerFax" type="text" size="12">
+
+                        <label for="applicantEmployerEmail">Email</label>
+                        <input id="applicantEmployerEmail" name="applicantEmployerEmail" type="email">
+
+                    </div>
+                    <div>
+
+                        <label for="applicantEmployerStart">Start Date</label>
+                        <input id="applicantEmployerStart" name="applicantEmployerStart" type="date" required>
+
+                        <label for="applicantMonthlyIncome">Monthly Income (Enter amount)   $</label>
+                        <input id="applicantMonthlyIncome" type="number" size="4" required>
+
+                        <label for="applicantEmployerPosition">Position</label>
+                        <input id="applicantEmployerPosition" name="applicantEmployerPosition" type="text" required>
+
+                    </div>
+
+                </fieldset>
+
+
+            </div>
+
+            <div class="legal" id="legalDisclaimer">
+                <p>&copy;Texas Association of REALTORS&copy; Inc. 2007</p>
+                <p>Use of this form by persons who are not members of the Texas Association of Realtors is not authorized.</p>
+            </div>
+
+            <div id="buttonArea">
+                <button>Submit The Application</button>
+            </div>
+
+        </form>
+    </div>
+
+
 
 </body>
 </html>
