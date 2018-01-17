@@ -6,6 +6,7 @@
     body {
         font-family: "Arial Narrow", sans-serif;
         max-width: 400px;
+        padding: 10px;
     }
 
     .alert-info {
@@ -116,9 +117,10 @@
     }
 
     img {
-        clear: both;
-        align-content: center;
+        /*clear: both;*/
+        /*align-content: center;*/
         width: 100%;
+        padding: auto;
     }
 
     section {
