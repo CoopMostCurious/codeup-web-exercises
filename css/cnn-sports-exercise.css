@@ -18,6 +18,7 @@
 .medium-column,
 .small-column,
 .column-in-thirds,
+.column-in-quarters,
 .column-75percent {
     float: left;
     width: 100%;
@@ -45,6 +46,10 @@ li {
 img {
     width: 100%;
     margin: 0 0;
+}
+
+video {
+    play-during: repeat;
 }
 
 @media screen and (min-width: 768px) {
