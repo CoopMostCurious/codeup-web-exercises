@@ -1,3 +1,10 @@
-h1 {
+.prettybanner {
+    opacity: 0.5;
+    text-decoration: rgb(108, 105, 96);
     text-align: center;
+    background-color: rgb(237, 237, 237);
+}
+
+.pizzapic {
+    background-image: url("http://java.codeup.com/examples/bootstrap/pizza.png");
 }
