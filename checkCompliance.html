@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Compliance Test</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="js/sweetalert2.js">
+</head>
+<body>
+    <!-- Testing out using Bootstrap 3 -->
+    <div class="container theme-showcase">
+    <div class="jumbotron">
+        <h1>Here is the script!</h1>
+        <p>Be aware this is still a site in development as a fun way to practice skills!!</p>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="button" class="btn btn-default" onclick="checkCompliance()">Check for compliance!</button>
+        </form>
+    </div>
+    </div>
+    <!-- End of the test code -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Added SweetAlert2 to make alerts pretty -->
+    <script src="https://unpkg.com/sweetalert2@7.7.0/dist/sweetalert2.all.js"></script>
+
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+    <!--My custom function I wrote and am proud of!!-->
+    <script>
+
+        "use strict";
+
+        function checkCompliance () {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            console.log('Username: ' + username);
+            console.log('Password: ' + password);
+            var passwordLength, usernameLength, passwordCondition, noWhiteSpace;
+
+            if (password.length > 5) {
+                console.log('Password is at least 5 characters');
+                passwordLength = true;
+            } else passwordLength = false;
+
+            if (username.length <= 20) {
+                console.log('username is less than or equal to 20 characters');
+                usernameLength = true;
+            } else usernameLength = false;
+
+            if (password.indexOf(username) < 0) {
+                console.log('username is not in password');
+                passwordCondition = true;
+            } else passwordCondition = false;
+
+            if (
+                (username.trim() === username) && (password.trim() === password)
+            ) {
+                console.log('no white space in either username or password');
+                noWhiteSpace = true;
+            } else noWhiteSpace = false;
+
+            if (passwordLength == true && usernameLength == true && passwordCondition == true && noWhiteSpace == true) {
+                console.log('all conditions are now met');
+                swal(
+                    'Good job!',
+                    'All conditions have been met!',
+                    'success'
+                )
+            } else swal(
+                    'Error!',
+                    'Please correct the username or the password and try again!',
+                    'error'
+                );
+        }
+
+    </script>
+</body>
+</html>
