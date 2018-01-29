@@ -29,13 +29,10 @@ function dayOfTheWeekStartsWithT(dayToCheck) {
     if (dayToCheck === 'Tuesday' || dayToCheck === 'Thursday') {
         return true;
     } else return false;
-}
+}g
 
 function checkPwd(str) {
-    var password = ((str.split('').join()));
     var backwards = ((str.split('').reverse().join()));
-    console.log('password is: ' + password);
-    console.log('backwards is: ' + backwards);
     if (str.length < 6) {
         return("too_short");
     } else if (str.search(/\d/) === -1) {
@@ -46,8 +43,8 @@ function checkPwd(str) {
         return("no_capital_letter");
     } else if (str.search(/[^a-zA-Z0-9\!\@\#\$\%\^\&\*\(\)\_\+]/) !== -1) {
         return("bad_char");
-    } else if (password === backwards) {
-        return("password is same backwards");
+    } else if (str === backwards) {
+        return("password_rev_match");
     }
     return('ok');
 }
