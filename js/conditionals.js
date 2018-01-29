@@ -17,15 +17,18 @@
  */
 
 function numberGame() {
-    var numberTheyGuess = prompt("Hi, give me a number, and I'll tell you if it is even/odd, what it is plus 100, and if it negative or positive!");
-    var numberAsInt = parseInt(numberTheyGuess);
-    if (!isNaN(numberAsInt)) {
-        (numberTheyGuess % 2 === 0) ? alert("Number is even!") : alert("Number is odd!");
-        alert("Number with 100 added is " + (parseInt(numberTheyGuess) + 100) + "!");
-        (numberTheyGuess > 0) ? alert("Number is positive!") : alert("Number is negative!");
-    } else {
-        alert('That is not even a number! No game for you!!');
+    var play = confirm('Would you like to play a game?');
+    if (play) {
+        var numberTheyGuess = prompt("Hi, give me a number, and I'll tell you if it is even/odd, what it is plus 100, and if it negative or positive!");
+        var numberAsInt = parseInt(numberTheyGuess);
+        if (!isNaN(numberAsInt)) {
+            (numberTheyGuess % 2 === 0) ? alert("Number is even!") : alert("Number is odd!");
+            alert("Number with 100 added is " + (parseInt(numberTheyGuess) + 100) + "!");
+            (numberTheyGuess > 0) ? alert("Number is positive!") : alert("Number is negative!");
+        } else {
+            alert('That is not even a number! No game for you!!');
         }
+    } else alert('Well, then, FINE!');
 }
 
 /* ########################################################################## */
