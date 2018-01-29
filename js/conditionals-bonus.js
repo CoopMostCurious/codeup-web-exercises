@@ -29,7 +29,7 @@ function dayOfTheWeekStartsWithT(dayToCheck) {
     if (dayToCheck === 'Tuesday' || dayToCheck === 'Thursday') {
         return true;
     } else return false;
-}g
+}
 
 function checkPwd(str) {
     var backwards = ((str.split('').reverse().join()));
