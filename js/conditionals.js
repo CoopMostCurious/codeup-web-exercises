@@ -146,6 +146,8 @@ analyzeColor(randomColor);
 var colorTheyLike = prompt('What color do you like?');
 analyzeColor(colorTheyLike);
 
+// console.log(analyzeColor(prompt('What color do you like?');
+
 /* ########################################################################## */
 
 /**
