@@ -26,7 +26,8 @@
 "use strict";
 
 function dayOfTheWeekStartsWithT(dayToCheck) {
-    if (dayToCheck === 'Tuesday' || dayToCheck === 'Thursday') {
+    dayToCheck.ignoreCase();
+    if (dayToCheck.toLowerCase() === 'tuesday' || dayToCheck.toLowerCase() === 'thursday') {
         return true;
     } else return false;
 }
