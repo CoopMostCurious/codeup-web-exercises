@@ -12,6 +12,10 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {};
+    person.firstName = 'Cooper';
+    person.lastName = 'Hanke';
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +25,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello = function () {
+        return 'Hello from ' + this.firstName + ' ' + this.lastName;
+    }
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +44,30 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    function calculateDiscount(amount) {
+        return (amount * 0.12).toFixed(2);
+    }
+
+    function calculateTotal(amount) {
+        return (amount - calculateDiscount(amount)).toFixed(2);
+    }
+
+    function checkForDiscount(object) {
+        object.forEach(function (shopper) {
+            if (shopper.amount > 200) {
+                console.log('Customer Name: ' + shopper.name + '\tCurrent Subtotal: ' + shopper.amount.toFixed(2) + '\tDiscount: '
+                    + calculateDiscount(shopper.amount) + '\tFinal Total: ' + calculateTotal(shopper.amount));
+            } else console.log('Customer Name: ' + shopper.name + '\tCurrent Subtotal: ' + shopper.amount.toFixed(2) + '\tNO DISCOUNT APPLIED');
+        });
+    }
+
+    checkForDiscount(shoppers);
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +81,44 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: 'The Communist Manifesto',
+            author: {
+                firstName: 'Karl',
+                lastName: 'Marx'
+            }
+        },
+        {
+            title: 'CompTIA Network+ Study Guide',
+            author: {
+                firstName: 'Todd',
+                lastName: 'Lammie'
+            }
+        },
+        {
+            title: 'CCENT Study Guide',
+            author: {
+                firstName: 'Todd',
+                lastName: 'Lammie'
+            }
+        },
+        {
+            title: 'Beginning Visual C++ 2010',
+            author: {
+                firstName: 'Ivor',
+                lastName: 'Horton'
+            }
+        },
+        {
+            title: 'The Art of Computer Programming',
+            author: {
+                firstName: 'Donald',
+                lastName: 'Knuth'
+            }
+        }
+        ];
 
     /**
      * TODO:
@@ -80,15 +145,59 @@
      *      ...
      */
 
+    books.forEach(function(book, index) {
+        console.log('Book # ' + (index + 1));
+        console.log('Title: ' + book.title);
+        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+        console.log('---');
+        }
+    );
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.
+     */
+
+    function createBook(title, author) {
+        var book = {
+            title: title,
+            author: {
+                firstName: '',
+                lastName: '',
+            },
+        };
+        var splitName = author.split(' ');
+        book.title = title;
+        book.author.firstName = splitName[0];
+        book.author.lastName = splitName[1];
+        return book;
+    }
+
+
+
+    // createBook('Bible','Human Beings');
+
+     /**
+     *
      * - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function showBookInfo(book) {
+         console.log('Title: ' + book.title);
+         console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+         console.log('---')
+
+         books.forEach(function (book) {
+                 console.log('Title: ' + book.title);
+                 console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+                 console.log('---');
+             }
+         );
+     }
 
 })();
