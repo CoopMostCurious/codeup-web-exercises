@@ -47,8 +47,12 @@ dog.fix = function() {
 }
 
 dog.vaccinate = function(typeOfShot) {
+    var currentDate = new Date();
+    var datetime = currentDate.getDate() + "/"
+        + (currentDate.getMonth()+1)  + "/"
+        + currentDate.getFullYear();
     this.shotRecords.typeOfShot = typeOfShot;
-    this.shotRecords.date = Date.now();
+    this.shotRecords.date = datetime;
 }
 
 /*
