@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Maps Exercise</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id='map'></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK9Gzsq-ZPBH78mfbkQbdBYueKa-tZauE"></script>
+<script>
+    (function() {
+        'use strict';
+
+        var address = '9 Bill Elliott Street, Dawsonville, Georgia 30534';
+
+        var mapOptions = {
+            zoom: 18,
+            center: {
+                lat: 34.4212,
+                lng: -84.1191
+            }
+        };
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: address,
+            map: map,
+            title: 'Dawsonville Pool Room'
+        });
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ 'address': address }, function(results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+                marker.setPosition(results[0].geometry.location);
+            } else {
+                alert('Geocoding was not successful - STATUS: ' + status);
+            }
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: 'Dawsonville Pool Room, Home of the Bully Burger'
+        });
+        infowindow.open(map, marker);
+    })();
+
+</script>
+</body>
+</html>
