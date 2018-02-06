@@ -42,16 +42,30 @@
     'use strict';
 
     function initMap() {
+        var alamo = {
+            lat: 29.4260,
+            lng: -98.4861
+        };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,
-            center: {lat: 29.4241, lng: -98.4936}, // added the lat and lng for San Antonio, TX
+            center: alamo, // added the lat and lng for San Antonio, TX
             mapTypeId: google.maps.MapTypeId.SATELLITE
         });
+        addMarker(alamo, map);
         var geocoder = new google.maps.Geocoder();
-
 
         document.getElementById('submit').addEventListener('click', function() {
             geocodeAddress(geocoder, map);
+        });
+    }
+
+    function addMarker(location, map) {
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            label: 'The Alamo!',
+            draggable: true,
+            animation: google.maps.Animation.DROP,
         });
     }
 
