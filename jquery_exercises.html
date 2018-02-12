@@ -26,6 +26,7 @@
         <li class="codeup">Thing 2</li>
         <li class="codeup">Cat In The Hat</li>
     </ul>
+    <button type="button" id="myButton">Click Me!</button>
 </aside>
 <p class="important">This is also very important.</p>
     <script src="js/jquery-2.2.4.min.js"></script>
@@ -33,6 +34,9 @@
         $(document).ready(function() {
 
             "use strict";
+            function clickedMe() {
+                $('*').css('color','orange');
+            }
             $("h1").click(function() {
                 $(this).css('background-color', 'orange');
             });
@@ -40,12 +44,22 @@
                 $(this).css('font-size','18px');
             });
             $('li').hover(
-                function() {
-                    $(this).css('color','orange');
-                },
-                function() {
-                    $(this).css('color','#000');
-                });
+                function(){
+                    $(this).css({
+                        'font-size':'20px',
+                        'color':'orange',
+                        'background-color':'orangered'
+                    })},
+                 function(){
+                     $(this).css({
+                        'font-size':'14px',
+                        'color':'black',
+                        'background-color':'white'
+                    })});
+                
+            $('#myButton').click(function() {
+                clickedMe();
+            });
         });
     </script>
 </body>
