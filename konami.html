@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konami Code</title>
+</head>
+    <header>
+        <h1>Konami Code</h1>
+        <p>You have <span id='numberOfLives'>3</span> lives</p>
+    </header>
+<body>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            'use strict';
+            var allKeyPresses = [];
+            var lives = 3;
+            console.log('number of lives: ' + lives);
+                $(document).keyup(function(event){
+                var code = event.keyCode;
+                console.log('code: ' + code);
+                console.log('allKeys: ' + allKeyPresses);
+                allKeyPresses.unshift(code);
+                console.log('after key: ' + allKeyPresses);
+                if (code === 13) {
+                    if (allKeyPresses == 65, 66, 39, 37, 40, 40, 38, 38) {
+                        alert('you made it');
+                    } else allKeyPresses = [];
+                }
+            })});
+    </script>
+</body>
+</html>
