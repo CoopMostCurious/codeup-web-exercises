@@ -10,7 +10,7 @@
         /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
         #map {
-            height: 100%;
+            height: 95%;
         }
         /* Optional: Makes the sample page fill the window. */
         html, body {
@@ -18,16 +18,24 @@
             margin: 0;
             padding: 0;
         }
+        #caption {
+            text-align: center;
+            font-family: Roboto, sans-serif;
+        }
     </style>
 </head>
 <body>
 <div id='map'></div>
+<div>
+    <p id="caption"></p>
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK9Gzsq-ZPBH78mfbkQbdBYueKa-tZauE"></script>
 <script>
     (function() {
         'use strict';
 
         var address = '9 Bill Elliott Street, Dawsonville, Georgia 30534';
+        var caption = document.getElementById('caption');
 
         var mapOptions = {
             zoom: 18,
@@ -42,11 +50,13 @@
             map: map,
             title: 'Dawsonville Pool Room'
         });
+
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({ 'address': address }, function(results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 marker.setPosition(results[0].geometry.location);
+                caption.innerText = 'Up to date as of: ' + Date();
             } else {
                 alert('Geocoding was not successful - STATUS: ' + status);
             }
