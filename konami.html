@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/konami.css">
+    <link rel="stylesheet" href="css/konami-animations.css">
 </head>
-    <header>
-        <h1>Konami Code</h1>
-        <p>You have <span id='numberOfLives'></span> lives</p>
-        <p id='secret'></p>
+    <header class="wrapper">
+        <h1 class="one box">Konami Code</h1>
+        <p class='two box'>You have <span id='numberOfLives'></span> lives</p>
+        <p id='secret' class="three" hidden></p>
     </header>
 <body>
     <script src="js/jquery-2.2.4.min.js"></script>
@@ -26,13 +29,11 @@
                 console.log(allKeyPresses.toString());
                 if (allKeyPresses.toString() === '13,65,66,39,37,39,37,40,40,38,38') {
                     lives = 30;
-
-                    $('html').css('background-color','orange');
                     $('#numberOfLives').text(lives.toString());
-                    $('header').append('<h2><strong>You have activated the almight Konami Code!!!</strong></h2>');
-                    console.log('should be playing...');
-                    $('#secret').append('<audio controls autoplay><source src=\'http://66.90.93.122/ost/contra-ost-nes-1988/dnkbcvpr/13%20Game%20Over.mp3\' type=\'audio/mp3\'></audio>');
+                    $('header > h1').append('<h2><strong>You have activated the almighty Konami Code!!!</strong></h2>');
+                    $('#secret').append('<audio autoplay><source src=\'http://66.90.93.122/ost/contra-ost-nes-1988/dnkbcvpr/13%20Game%20Over.mp3\' type=\'audio/mp3\'></audio>');
                     $('audio').removeAttr('hidden');
+                    $('body').addClass('backgroundFlash');
                 } else allKeyPresses = [];
             }
         })});

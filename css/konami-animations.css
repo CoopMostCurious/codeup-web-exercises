@@ -1,0 +1,8 @@
+@keyframes backgroundFlash {
+    0%, 100% {
+        background-color: orange;
+    }
+    50% {
+        background-color: orangered;
+    }
+}
