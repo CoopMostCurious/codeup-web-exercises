@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery FAQ</title>
+    <style>
+        .invisible {
+                display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -87,11 +92,16 @@
                         </ul>
                     </dd>
         </dl>
+        <button type="button" id="toggleSwitch">Toggle Definitions</button>
     </article>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
         'use strict';
-
+        $(document).ready(function() {
+            $('dd').addClass('invisible');
+            $('#toggleSwitch').click(function(e) {
+                $('dd').toggleClass('invisible');
+            });});
     </script>
 </body>
 </html>
