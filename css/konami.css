@@ -50,6 +50,6 @@
 
 /* For the animation upon winning */
 .backgroundFlash {
-    animation: backgroundFlash 2s infinite;
+    animation: backgroundFlash 1s infinite;
 }
 
