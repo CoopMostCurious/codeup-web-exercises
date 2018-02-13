@@ -99,6 +99,9 @@
         'use strict';
         $(document).ready(function() {
             $('dd').addClass('invisible');
+            $('dd').click(function(){
+                $(this).css('background-color','orange');
+            });
             $('#toggleSwitch').click(function(e) {
                 $('dd').toggleClass('invisible');
             });});
