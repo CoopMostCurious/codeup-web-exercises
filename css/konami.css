@@ -19,31 +19,31 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 5fr);
+    grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
 
 .spacer {
-    grid-column: 1 / 4;
+    grid-column: 1;
     grid-row: 1;
     height: 22.5vh;
 }
 
 .one {
-    grid-column: 2 / 4;
+    grid-column: 1;
     grid-row: 2;
     text-align: center;
 }
 
 .two {
-    grid-column: 2 / 4;
+    grid-column: 1;
     grid-row: 3;
     text-align: center;
 }
 
 .three {
-    grid-column: 2 / 4;
+    grid-column: 1;
     grid-row: 4;
 }
 

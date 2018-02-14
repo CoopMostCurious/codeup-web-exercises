@@ -16,7 +16,7 @@
         <h1>Frequently Asked Questions</h1>
     </header>
 
-    <article>
+    <section>
         <p>A list of frequently asked questions about national parks.</p>
         <p>So let us begin!</p>
         <dl>
@@ -93,7 +93,36 @@
                     </dd>
         </dl>
         <button type="button" id="toggleSwitch">Toggle Definitions</button>
-    </article>
+    </section>
+
+    <section>
+        <h3>National Park #1</h3>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+
+        <h3>National Park #2</h3>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+
+        <h3>National Park #3</h2>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+
+        <button type="button" id="highlight">Highlight Action</button>
+    </section>
+    
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
         'use strict';
@@ -104,7 +133,16 @@
             });
             $('#toggleSwitch').click(function(e) {
                 $('dd').toggleClass('invisible');
-            });});
+            });
+            $('#highlight').click(function() {
+                $('ul').each(function(){
+                    $('li:last-child').css('background-color','yellow');
+                });
+            });
+            $('h3').click(function() {
+                $('li').parent().css('font-weight','bold');
+            });
+        });
     </script>
 </body>
 </html>
