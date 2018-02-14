@@ -15,7 +15,9 @@
     <header>
         <h1>Frequently Asked Questions</h1>
     </header>
-
+    <section id="newsletter-signup">
+        <h1>Would you like to sign up for our newsletter? <span>X</span> </h1>
+    </section>
     <section>
         <p>A list of frequently asked questions about national parks.</p>
         <p>So let us begin!</p>
@@ -120,6 +122,8 @@
             <li>item</li>
         </ul>
 
+        <h2 id="register-prompt" hidden>Would you like to register for this site?</h2>
+
         <button type="button" id="highlight">Highlight Action</button>
     </section>
     
@@ -142,6 +146,13 @@
             $('h3').click(function() {
                 $('li').parent().css('font-weight','bold');
             });
+            $('#newsletter-signup span').click(function() {
+                $(this).parent().hide();
+            });
+            $('h3').click(function() {
+                $(this).next().children().slideToggle();
+            });
+            $('#register-prompt').fadeIn(8000);
         });
     </script>
 </body>
