@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery FAQ</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <style>
         .invisible {
                 display: none;
@@ -15,9 +16,10 @@
     <header>
         <h1>Frequently Asked Questions</h1>
     </header>
-    <section id="newsletter-signup">
-        <h1>Would you like to sign up for our newsletter? <span>X</span> </h1>
-    </section>
+    <div id="newsletter-signup" class="alert alert-info alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Hello!</strong> Would you like to sign up for our newsletter?
+      </div>
     <section>
         <p>A list of frequently asked questions about national parks.</p>
         <p>So let us begin!</p>
@@ -146,14 +148,11 @@
             $('h3').click(function() {
                 $('li').parent().css('font-weight','bold');
             });
-            $('#newsletter-signup span').click(function() {
-                $(this).parent().hide();
-            });
             $('h3').click(function() {
                 $(this).next().children().slideToggle();
             });
-            $('#register-prompt').fadeIn(8000);
         });
     </script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
