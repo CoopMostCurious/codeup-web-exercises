@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Online Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Store</title>
+    <link rel="stylesheet" href="css/ajax-store.css">
 </head>
 <body>
-
-<h1>My Tool Store</h1>
-<button id="get-data" type="button">Dev Test</button>
+<header>
+    <h1>My Tool Store</h1>
+</header>
+<article>
 <table id="products">
     <thead>
         <tr>
@@ -18,12 +23,12 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
-<p class='test'></p>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<button id="get-data" type="button">Update Inventory</button>
+</article>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="js/jquery-2.2.4.min.js"></script>
 <script>
+(function() {
 $(document).ready(function() {
     $('#get-data').click(function() {
         $.ajax({
@@ -32,7 +37,6 @@ $(document).ready(function() {
             data: 'data',
             dataType: 'json',
             success: function (data) {
-                // do something with this data
                 $('#insertProducts').html('');
                 data.forEach(function(item){
                     $('#insertProducts').append('<tr>');
@@ -44,10 +48,15 @@ $(document).ready(function() {
                     };
                     $('#insertProducts').append('</tr>');
                 });
+            },
+            error: function(status){
+                console.log('Server connection failed with status of ' + status);
+                $('#insertProducts').replaceWith('<h3>Unable to process your request at this time. Please try again.');
             }
-        })
         });
     });
+});
+});
     // TODO: Create an ajax GET request for /data/inventory.json
      
     // TODO: Take the data from inventory.json and append it to the products table

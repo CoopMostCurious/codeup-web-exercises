@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Blog</title>
+    <link rel="stylesheet" href="css/ajax-blog.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Meet the AJAX Blog</h1>
+    </header>
+    <content>
+        <h2>Latest Post</h2>
+        <div id="posts"></div>
+    </content>
+    <div><button id="update-posts" type="button">Update Posts</button></div>
+</div>
+   <script src="js/jquery-2.2.4.min.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+   <script>
+       (function(){
+           $(document).ready(function() {
+                updatePosts();
+                function updatePosts() {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'data/blog.json',
+                        data: 'data',
+                        dataType: 'json',
+                        success: function (data, status) {
+                            var post = $('#posts');
+                            post.html('');
+                            console.log('Update from server: ' + status);
+                            data.forEach(function(article){
+                                var postDisplay = ('<article class="blog-post">');
+                                postDisplay += ('<h3>' + article.title + '</h3>');
+                                postDisplay += ('<p>' + article.date + '</p>');
+                                postDisplay += ('<p>' + article.content + '</p>');
+                                postDisplay += ('<ul>');
+                                for (var i = 0; i < article.categories.length; i++) {
+                                    postDisplay += ('<li>' + article.categories[i] + '</li>');
+                                };
+                                postDisplay += ('</ul>');
+                                postDisplay += ('</article>');
+                                post.append(postDisplay);
+                            });
+                        }
+                    });
+                };
+                $('#update-posts').click(function() {
+                    updatePosts();
+                });
+            });
+        })();
+   </script> 
+</body>
+</html>

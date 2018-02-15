@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    /* parent element */
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: 5vh 15vh 70vh 5vh 5vh;
+    grid-gap: 5px;
+}
+
+header {
+    /* is a child of wrapper class */
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    text-align: center;
+    font-size: 2rem;
+}
+
+content {
+    /* is a child of wrapper class */
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    /* overflow: scroll; */
+    font-size: 1rem;
+}
+
+.update-button {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+
+    
