@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Map</title>
+</head>
+<body>
+    <h1>Weather for San Antonio</h1>
+    <p>Take the temp from the average of main.temp_min and main.temp_max</p>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+    (function(){
+        console.log('pulling the request...');
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: "cb998e047c25d215f80ec8cae5eea5fe",
+            id:    4726206,
+            units: "imperial"
+        }).done(function(data) {
+            var response = data.list;
+            // take the average of the temp_min to use for a day's forecast, you will need 8 of these
+            today();
+            tomorrow();
+            dayAfterTomorrow();
+            // for today
+            function today() {
+                var counter = 0;
+                var low = 0;
+                var high = 0;
+                for (var i = 0; i < 8; i++) {
+                    low += response[i].main.temp_min;
+                    high += response[i].main.temp_max;
+                    counter++;
+                }
+                low = low / 8;
+                high = high / 8;
+                console.log('the low for today is: ' + low);
+                console.log('the high for today is: ' + high);
+                // console.log('should be all numbers added together ' + low);
+            }
+            // for tomorrow
+            function tomorrow() {
+                var counter = 0;
+                var low = 0;
+                var high = 0;
+                for (var i = 8; i < 16; i++) {
+                    low += response[i].main.temp_min;
+                    high += response[i].main.temp_max;
+                    counter++;
+                }
+                low = low / 8;
+                high = high / 8;
+                console.log('tomorrow\'s low will be: ' + low);
+                console.log('tomorrow\'s high will be: ' + high);
+            }
+            // for the next
+            function dayAfterTomorrow() {
+                var counter = 0;
+                var low = 0;
+                var high = 0;
+                for (var i = 16; i < 24; i++) {
+                    low += response[i].main.temp_min;
+                    high += response[i].main.temp_max;
+                    counter++;
+                }
+                low = low / 8;
+                high = high / 8;
+                console.log('the low for the day after will be: ' + low);
+                console.log('the high for the day after will be: ' + high);
+            }
+            }
+        );
+    })();
+</script>
+</html>
