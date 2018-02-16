@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -12,7 +12,7 @@ html {
 .main {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: auto 20vh 60vh auto;
+    grid-template-rows: 5vh 30vh 65vh;
     grid-row-gap: 3vh;
 }
 
@@ -35,6 +35,7 @@ header {
     grid-row: 2 / 3;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -61,5 +62,9 @@ header {
 .map {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+}
+
+#map {
+    height: 100%;
 }
 

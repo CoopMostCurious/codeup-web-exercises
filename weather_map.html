@@ -25,8 +25,10 @@
             </div>
         </div>
     </section>
-    <section id="map" class="map"></section>
-    </div>
+    <section class="map">
+        <div id="map"></div>
+    </section>
+</div>
 </body>
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK9Gzsq-ZPBH78mfbkQbdBYueKa-tZauE"></script>
@@ -124,7 +126,6 @@
                 day.append('<h2>' + low + '&#176;/' + high + '&#176;</h2>');
                 day.append('<img src=\"http://openweathermap.org/img/w/' + response[16].weather[0].icon + '.png\"</img>');
                 day.append('<h5>' + response[16].weather[0].main + ' <span>' + response[16].weather[0].description + '</h5>');
-                day.append('<h5>' + response[16].weather[0].description + '</h5>')
                 day.append('<h5>Humidity ' + processAverages(humidities) + '</h5>');
                 day.append('<h5>Avg Wind: ' + processAverages(winds) + '</h5>');
                 day.append('<h5>Pressure: ' + processAverages(pressures) + '</h5>');
