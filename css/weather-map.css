@@ -11,24 +11,55 @@ html {
 
 .main {
     display: grid;
-    grid-template-columns: 40px 50px auto 50px 40px;
-    grid-template-rows: 25vh auto;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto 20vh 60vh auto;
+    grid-row-gap: 3vh;
 }
 
 header {
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
     grid-row: 1 / 2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .weather-table {
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
 .weather-grid {
     display: grid;
+    grid-gap: 3vw;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    overflow: hidden;
 }
+
+#today {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#tomorrow {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#day-after-tomorrow {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.weather-item {
+    background-color: #F1F1F1;
+    text-align: center;
+}
+
+.map {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+

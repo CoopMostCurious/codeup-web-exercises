@@ -8,28 +8,42 @@
     <link rel="stylesheet" href="css/weather-map.css">
 </head>
 <body>
-    <div class="main">
-        <header>
-    <h1>Weather for San Antonio</h1>
+<div class="main">
+    <header>
+        <h1>Weather for San Antonio</h1>
     </header>
-    <div class="weather-table">
+    <section class="weather-table">
         <div class="weather-grid">
-            <div id="today">
-                <h2>Today</h2>
+            <div class="weather-item" id="today">
+                <h3>Today</h3>
             </div>
-            <div id="tomorrow">
-            <h2>Tomorrow</h2>
+            <div class="weather-item" id="tomorrow">
+            <h3>Tomorrow</h3>
             </div>
-            <div id="day-after-tomorrow">
-            <h2>Day After Tomorrow</h2>
+            <div class="weather-item" id="day-after-tomorrow">
+            <h3>Day After Tomorrow</h3>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="map" class="map"></section>
     </div>
 </body>
 <script src="js/jquery-2.2.4.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK9Gzsq-ZPBH78mfbkQbdBYueKa-tZauE"></script>
 <script>
     (function(){
+        $(document).ready(function(){
+        var lat = 29.4268;
+        var lng = -98.4896;
+        var options = {
+            zoom: 18,
+            center: {
+                lat: lat,
+                lng: lng
+            }
+        }
+        var mapDisplay = document.getElementById('map');
+        var map = new google.maps.Map(mapDisplay, options);
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "cb998e047c25d215f80ec8cae5eea5fe",
             id:    4726206,
@@ -37,7 +51,6 @@
         }).done(function(data) {
             var response = data.list;
             console.log(response);
-            console.log(response[0].weather[0].main);
             today();
             tomorrow();
             dayAfterTomorrow();
@@ -59,11 +72,9 @@
                 low = parseInt(Math.min(...temps));
                 high = parseInt(Math.max(...temps));
                 var humidity = 
-                day.append('<p>Low ' + low + '</p>');
-                day.append('<p>High ' + high + '</p>');
-                day.append('<p>' + '' + '</p>');
-                day.append('<p>' + response[0].weather[0].main + '</p>');
-                day.append('<p>' + response[0].weather[0].description + '</p>');
+                day.append('<h2>' + low + '&#176;/' + high + '&#176;</h2>');
+                day.append('<img src=\"http://openweathermap.org/img/w/' + response[0].weather[0].icon + '.png\"</img>');
+                day.append('<p>' + response[0].weather[0].main + ' <span>' + response[0].weather[0].description + '</span></p>');
                 day.append('<p>Humidity ' + processAverages(humidities) + '</p>');
                 day.append('<p>Avg Wind Speed: ' + processAverages(winds) + '</p>'); 
                 // pressure
@@ -86,10 +97,9 @@
                 }
                 low = parseInt(Math.min(...temps));
                 high = parseInt(Math.max(...temps));
-                day.append('<p>Low ' + low + '</p>');
-                day.append('<p>High ' + high + '</p>');
-                day.append('<p>' + response[8].weather[0].main + '</p'); 
-                day.append('<p>' + response[8].weather[0].description + '</p>');
+                day.append('<h2>' + low + '&#176;/' + high + '&#176;</h2>');
+                day.append('<img src=\"http://openweathermap.org/img/w/' + response[8].weather[0].icon + '.png\"</img>');
+                day.append('<p>' + response[8].weather[0].main + ' <span>' + response[8].weather[0].description + '</p>'); 
                 day.append('<p>Humidity ' + processAverages(humidities) + '</p>');
                 day.append('<p>Avg Winds: ' + processAverages(winds) + '</p>');
                 day.append('<p>Pressure: ' + processAverages(pressures) + '</p>');
@@ -111,13 +121,13 @@
                 }
                 low = parseInt(Math.min(...temps));
                 high = parseInt(Math.max(...temps));
-                day.append('<p>Low ' + low + '</p>');
-                day.append('<p>High ' + high + '</p>');
-                day.append('<p>' + response[16].weather[0].main + '</p');
-                day.append('<p>' + response[16].weather[0].description + '</p>')
-                day.append('<p>Humidity ' + processAverages(humidities) + '</p>');
-                day.append('<p>Avg Wind: ' + processAverages(winds) + '</p>');
-                day.append('<p>Pressure: ' + processAverages(pressures) + '</p>');
+                day.append('<h2>' + low + '&#176;/' + high + '&#176;</h2>');
+                day.append('<img src=\"http://openweathermap.org/img/w/' + response[16].weather[0].icon + '.png\"</img>');
+                day.append('<h5>' + response[16].weather[0].main + ' <span>' + response[16].weather[0].description + '</h5>');
+                day.append('<h5>' + response[16].weather[0].description + '</h5>')
+                day.append('<h5>Humidity ' + processAverages(humidities) + '</h5>');
+                day.append('<h5>Avg Wind: ' + processAverages(winds) + '</h5>');
+                day.append('<h5>Pressure: ' + processAverages(pressures) + '</h5>');
             }
             function processAverages(array) {
                 var sum = 0;
@@ -129,6 +139,7 @@
             console.log('Done.');
             }
         );
+        })
     })();
 </script>
 </html>
