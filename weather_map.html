@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Map</title>
+    <link rel="stylesheet" href="css/weather-map.css">
 </head>
 <body>
+    <div class="main">
+        <header>
     <h1>Weather for San Antonio</h1>
-    <div id="today">
-        <h2>Today</h2>
+    </header>
+    <div class="weather-table">
+        <div class="weather-grid">
+            <div id="today">
+                <h2>Today</h2>
+            </div>
+            <div id="tomorrow">
+            <h2>Tomorrow</h2>
+            </div>
+            <div id="day-after-tomorrow">
+            <h2>Day After Tomorrow</h2>
+            </div>
+        </div>
     </div>
-    <div id="tomorrow">
-        <h2>Tomorrow</h2>
-    </div>
-    <div id="day-after-tomorrow">
-        <h2>Day After Tomorrow</h2>
     </div>
 </body>
 <script src="js/jquery-2.2.4.min.js"></script>
