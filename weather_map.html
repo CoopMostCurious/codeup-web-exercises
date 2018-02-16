@@ -9,11 +9,19 @@
 <body>
     <h1>Weather for San Antonio</h1>
     <p>Take the temp from the average of main.temp_min and main.temp_max</p>
+    <div id="today">
+        <h2>Today</h2>
+    </div>
+    <div id="tomorrow">
+        <h2>Tomorrow</h2>
+    </div>
+    <div id="day-after-tomorrow">
+        <h2>Day After Tomorrow</h2>
+    </div>
 </body>
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
     (function(){
-        console.log('pulling the request...');
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "cb998e047c25d215f80ec8cae5eea5fe",
             id:    4726206,
@@ -31,10 +39,10 @@
                 for (var i = 0; i < 8; i++) {
                     temps.push(response[i].main.temp);
                 }
-                low = Math.min(...temps);
-                high = Math.max(...temps); 
-                console.log('the low for today is: ' + parseInt(low));
-                console.log('the high for today is: ' + parseInt(high));
+                low = parseInt(Math.min(...temps));
+                high = parseInt(Math.max(...temps));
+                $('#today').append('<p>Low ' + low + '</p>');
+                $('#today').append('<p>High ' + high + '</p>');
             }
             // for tomorrow
             function tomorrow() {
@@ -44,10 +52,10 @@
                 for (var i = 8; i < 16; i++) {
                     temps.push(response[i].main.temp);
                 }
-                low = Math.min(...temps);
-                high = Math.max(...temps);
-                console.log('the low for tomorrow is: ' + parseInt(low));
-                console.log('the high for tomorrow is: ' + parseInt(high));
+                low = parseInt(Math.min(...temps));
+                high = parseInt(Math.max(...temps));
+                $('#tomorrow').append('<p>Low ' + low + '</p>');
+                $('#tomorrow').append('<p>High ' + high + '</p>');
             }
             // for the next
             function dayAfterTomorrow() {
@@ -57,11 +65,12 @@
                 for (var i = 16; i < 24; i++) {
                     temps.push(response[i].main.temp);
                 }
-                low = Math.min(...temps);
-                high = Math.max(...temps);
-                console.log('the low for the day after tomorrow is: ' + parseInt(low));
-                console.log('the high for the day after tomorrow is: ' + parseInt(high));
+                low = parseInt(Math.min(...temps));
+                high = parseInt(Math.max(...temps));
+                $('#day-after-tomorrow').append('<p>Low ' + low + '</p>');
+                $('#day-after-tomorrow').append('<p>High ' + high + '</p>');
             }
+            console.log('Done.');
             }
         );
     })();
