@@ -26,7 +26,7 @@
         </div>
     </section>
     <section class="map">
-        <div id="map"></div>
+        <div id="map-canvas"></div>
     </section>
 </div>
 </body>
@@ -34,18 +34,23 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK9Gzsq-ZPBH78mfbkQbdBYueKa-tZauE"></script>
 <script>
     (function(){
+        'use strict';
         $(document).ready(function(){
-        var lat = 29.4268;
-        var lng = -98.4896;
-        var options = {
-            zoom: 18,
-            center: {
-                lat: lat,
-                lng: lng
-            }
+        var lattitude = 29.426791;
+        var longitude = -98.489602;
+        drawMap(lattitude, longitude);
+
+        function drawMap(lattitude, longitude) {
+            var mapOptions = {
+                zoom: 19,
+                center: {
+                    lat: lattitude,
+                    lng: longitude
+                }
+            };
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         }
-        var mapDisplay = document.getElementById('map');
-        var map = new google.maps.Map(mapDisplay, options);
+
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "cb998e047c25d215f80ec8cae5eea5fe",
             id:    4726206,
@@ -137,7 +142,8 @@
                 }
                 return parseInt(sum / array.length);
             }
-            console.log('Done.');
+
+            console.log('Done with weather loading');;
             }
         );
         })

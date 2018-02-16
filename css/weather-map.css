@@ -6,12 +6,12 @@
 
 html {
     background-color: #B9DBFC;
-    font-size: 16px;
+    font-size: 8px;
 }
 
 .main {
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: 10vw 80vw 10vw;
     grid-template-rows: 5vh 30vh 65vh;
     grid-row-gap: 3vh;
 }
@@ -62,9 +62,14 @@ header {
 .map {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    margin: 2px;
 }
 
-#map {
-    height: 100%;
+#map-canvas {
+    height: 95%;
 }
 
+#lattitude,
+#longitude {
+    margin-bottom: 5px;
+}
