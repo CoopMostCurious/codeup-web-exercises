@@ -25,7 +25,12 @@
             </div>
         </div>
     </section>
-    <section id="map" class="map"></section>
+    <section class="map">
+        <div id="map"></div>
+        <input id='lattitude' type="text" placeholder="Lattitude">
+        <input id='longitude' type="text" placeholder="Longitude">
+        <button id='submitCords'>Update Map</button>
+    </section>
     </div>
 </body>
 <script src="js/jquery-2.2.4.min.js"></script>
@@ -33,17 +38,7 @@
 <script>
     (function(){
         $(document).ready(function(){
-        var lat = 29.4268;
-        var lng = -98.4896;
-        var options = {
-            zoom: 18,
-            center: {
-                lat: lat,
-                lng: lng
-            }
-        }
-        var mapDisplay = document.getElementById('map');
-        var map = new google.maps.Map(mapDisplay, options);
+        'use strict';
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "cb998e047c25d215f80ec8cae5eea5fe",
             id:    4726206,
