@@ -105,9 +105,10 @@ alert(`Tip the amount of $${tipAmount.toFixed(2)}`);
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount(originalPrice, discountPercentage) {
-    if (discountPercentage > 1) {
-        alert('Percentage amounts should be less than 1');
-    } else var discountApplied = originalPrice.toFixed(2) - (originalPrice.toFixed(2) * discountPercentage.toFixed(2));
-    alert('After discount, total is: $' + discountApplied.toFixed(2));
-}
+const originalPrice = 100;
+const discountPercent = 0.2;
+
+const applyDiscount = (originalPrice, discountPercent) => {
+    if (discountPercent > 1) { return `Percentage amount should be less that 1`;}
+    else { return `After discount, total is: $${originalPrice.toFixed(2) - originalPrice.toFixed(2) * discountPercent.toFixed(2)}`;}
+};
