@@ -9,10 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name) {
-    var greeting = "Hello, " + name + "!";
-    return greeting;
-}
+let sayHello = (name) => { return `Hello, ${name}!`;};
 
 /**
  * TODO:
@@ -22,7 +19,7 @@ function sayHello(name) {
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = sayHello('Cooper');
+let helloMessage = sayHello('Cooper');
 
 /**
  * TODO:
@@ -31,7 +28,7 @@ var helloMessage = sayHello('Cooper');
  * console.
  */
 
-var myName = 'Cooper';
+let myName = 'Cooper';
 sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -51,11 +48,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  **/
 
-function isTwo(number) {
-    if (number % 2 == 0) {
-        return true;
-    } else return false;
-}
+const isTwo = (number) => { return number % 2 === 0; };
 
 /**
  *
@@ -80,10 +73,10 @@ isTwo(random);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(billTotal, tipPercentage) {
-    tipPercentage = tipPercentage * 0.01;
+const calculateTip = (billTotal, tipPercentage) => {
+    tipPercentage *= 0.01;
     return billTotal - (tipPercentage * billTotal);
-}
+};
 
 /**
  * TODO:
@@ -92,10 +85,10 @@ function calculateTip(billTotal, tipPercentage) {
  * then display the dollar amount they should tip
  */
 
-var billTotal = prompt('Total Bill: ');
-var tipPercentage = prompt('Tip Percentage: ');
-var tipAmount = (calculateTip(billTotal, tipPercentage));
-alert('Tip the amount of $' + tipAmount.toFixed(2));
+let billTotal = prompt(`Total Bill: `);
+let tipPercentage = prompt(`Tip Percentage: `);
+let tipAmount = calculateTip(billTotal, tipPercentage);
+alert(`Tip the amount of $${tipAmount.toFixed(2)}`);
 
 /**
  * TODO:
