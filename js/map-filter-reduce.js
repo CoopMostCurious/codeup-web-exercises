@@ -39,3 +39,12 @@ const usersAsObj = users.reduce((obj, item) => {
         obj[item.id] = item;
         return obj;
     }, {});
+
+/*
+
+array.reduce((array, keyField) => {
+    obj[item[keyField] = item;
+    return obj;
+    }, {});
+
+*/
