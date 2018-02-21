@@ -31,13 +31,11 @@ const users = [
     },
 ];
 
-const triples =  users.filter(n => n.languages.length > 2);
+const triples = users.filter(user => user.languages.length > 2);
 
-const emails = users.map(n => n.email);
+const emails = users.map(user => user.email);
 
 const usersAsObj = users.reduce((obj, item) => {
         obj[item.id] = item;
         return obj;
     }, {});
-
-
