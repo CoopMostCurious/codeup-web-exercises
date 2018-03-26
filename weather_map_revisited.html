@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">TIME</a>
+            <a class="navbar-brand" href="#"><span id="local-time"></span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -65,7 +65,9 @@
                     <h3 class="panel-title">Today</h3>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <span id="high_today"></span>
+                    <span id="low_today"></span>
+                    <span id="today_headline"></span>
                 </div>
             </div>
         </div><!-- /.col-sm-4 -->
@@ -75,7 +77,9 @@
                     <h3 class="panel-title">Tomorrow</h3>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <span id="high_2"></span>
+                    <span id="low_2"></span>
+                    <span id="tomorrow_headline"></span>
                 </div>
             </div>
         </div><!-- /.col-sm-4 -->
@@ -85,7 +89,9 @@
                     <h3 class="panel-title">The Day After</h3>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <span id="high_3"></span>
+                    <span id="low_3"></span>
+                    <span id="day_after_headline"></span>
                 </div>
             </div>
         </div><!-- /.col-sm-4 -->
@@ -599,26 +605,125 @@
 <!-- Google Maps API integration -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUo4XTTl9my6_AqGDWQiKgoswpHo30XjU"></script>
 <script>
-    $(document).ready(function() {
-        console.log('JQuery loaded...');
-        var latt = 51.508742;
-        var long = -0.120850;
-        var myLatLng = {lat: latt, lng: long};
-        function myMap() {
-            var mapProp = {
-                center: myLatLng,
-                zoom: 5
-            };
-            var map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
+    $(document).ready(function () {
+        // update the time first, and keep it going!
+        setInterval(updateTime, 1000);
+        function updateTime() {
+            var time = new Date(Date.now()).toLocaleTimeString();
+            $('#local-time').html(time);
+        }
+
+        // Note: This example requires that you consent to location sharing when
+        // prompted by your browser. If you see the error "The Geolocation service
+        // failed.", it means you probably did not give permission for the browser to
+        // locate you.
+        var map, infoWindow, pos, payload;
+        var apiKey = "cb998e047c25d215f80ec8cae5eea5fe";
+        var weatheritems0 = [];
+        var weatheritems1 = [];
+        var weatheritems2 = [];
+        var weatheritems3 = [];
+        var weatheritems4 = [];
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: pos,
+                zoom: 12
+            });
+            infoWindow = new google.maps.InfoWindow;
+
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('Location found.');
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                    console.log(pos.lat + ' ' + pos.lng);
+                    getWeather(pos.lat, pos.lng)
+                }, function () {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+
+        function getWeather(lat, lng) {
+            console.log('passed the location');
+            $.get({
+                url: 'http://api.openweathermap.org/data/2.5/forecast?lat=' +
+                    lat + '&lon=' + lng + '&units=imperial' + '&appid=' + apiKey,
+                success: function(result) {
+                    console.log('received weather');
+                    window.payload = result;
+                    console.log('dropped off the payload');
+                    var timing = setTimeout(sortWeatherByLocalTime(result), 300);
+                    clearTimeout(timing);
+                }
             });
         }
-        myMap();
+
+        function sortWeatherByLocalTime(payload) {
+            // sorting out the results by the day
+            var compare = new Date(payload.list[0].dt * 1000);
+            for (var i = 0; i < payload.cnt; i++) {
+                if (compare.getUTCDate() === new Date(payload.list[i].dt * 1000).getUTCDate()) {
+                    weatheritems0.push(payload.list[i]);
+                } else if (compare.getUTCDate() + 1 === new Date(payload.list[i].dt * 1000).getUTCDate()) {
+                    weatheritems1.push(payload.list[i]);
+                } else if (compare.getUTCDate() + 2 === new Date(payload.list[i].dt * 1000).getUTCDate()) {
+                    weatheritems2.push(payload.list[i]);
+                } else if (compare.getUTCDate() + 3 === new Date(payload.list[i].dt * 1000).getUTCDate()) {
+                    weatheritems3.push(payload.list[i]);
+                } else if (compare.getUTCDate() + 4 === new Date(payload.list[i].dt * 1000).getUTCDate()) {
+                    weatheritems4.push(payload.list[i]);
+                }
+            }
+            $('#high_today').html('<p>' + sortHighsForDay(weatheritems0) + '</p>');
+            $('#low_today').html('<p>' + sortLowsForDay(weatheritems0) + '</p>');
+            $('#high_2').html('<p>' + sortHighsForDay(weatheritems1) + '</p>');
+            $('#low_2').html('<p>' + sortLowsForDay(weatheritems1) + '</p>');
+            $('#high_3').html('<p>' + sortHighsForDay(weatheritems2) + '</p>');
+            $('#low_3').html('<p>' + sortLowsForDay(weatheritems2) + '</p>');
+        }
+        function sortHighsForDay(weatheritems){
+            var high = 0;
+            for (var i = 0; i < weatheritems.length; i++) {
+                if (weatheritems[i].main.temp.toFixed(0) > high) {
+                    high = weatheritems[i].main.temp.toFixed(0);
+                }
+            }
+            return high;
+        }
+        function sortLowsForDay(weatheritems) {
+            var low;
+            for (var i = 0; i < weatheritems.length; i++) {
+                if (low === undefined) {
+                    low = weatheritems[i].main.temp.toFixed(0);
+                }
+                if (weatheritems[i].main.temp.toFixed(0) < low) {
+                    low = weatheritems[i].main.temp.toFixed(0);
+                }
+            }
+            return low;
+        }
+        initMap();
     });
 </script>
+
 
 </body>
 </html>
