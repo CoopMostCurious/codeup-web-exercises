@@ -57,7 +57,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <h1>Location-based Weather Application</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>This is a webpage showcasing my prowess with programming in HTML, CSS, and JavaScript, while demonstrating back-end skills deploying a production server, as I am hosting this site on my own platform</p>
     </div>
 
     <div class="page-header">
@@ -69,7 +69,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Today</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body text-center">
                     <span id="weather1"></span>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Tomorrow</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body text-center">
                     <span id="weather2"></span>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">The Day After</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body text-center">
                     <span id="weather3"></span>
                 </div>
             </div>
@@ -611,19 +611,16 @@
             var time = new Date(Date.now()).toLocaleTimeString();
             $('#local-time').html(time);
         }
-
         // Note: This example requires that you consent to location sharing when
         // prompted by your browser. If you see the error "The Geolocation service
         // failed.", it means you probably did not give permission for the browser to
         // locate you.
         var map, infoWindow, pos, payload;
         var apiKey = "cb998e047c25d215f80ec8cae5eea5fe";
-        var weatheritems0 = [];
-        var weatheritems1 = [];
-        var weatheritems2 = [];
-        var weatheritems3 = [];
-        var weatheritems4 = [];
-        var main1, main2, main3;
+        for (var i = 0; i !== 5; i++) {
+            var name = 'weatheritems' + i;
+            eval(name + '= []');
+        }
         function initMap() {
             map = new google.maps.Map(document.getElementById('map-canvas'), {
                 center: pos,
@@ -668,16 +665,14 @@
                     lat + '&lon=' + lng + '&units=imperial' + '&appid=' + apiKey,
                 success: function(result) {
                     console.log('received weather');
-                    window.payload = result;
-                    console.log('dropped off the payload');
                     var timing = setTimeout(sortWeatherByLocalTime(result), 1000);
+                    renderWeather(result);
                     clearTimeout(timing);
                 }
             });
         }
         function sortWeatherByLocalTime(payload) {
             // sorting out the results by the day
-            var html1, html2, html3;
             var compare = new Date(payload.list[0].dt * 1000);
             for (var i = 0; i < payload.cnt; i++) {
                 if (compare.getUTCDate() === new Date(payload.list[i].dt * 1000).getUTCDate()) {
@@ -692,51 +687,33 @@
                     weatheritems4.push(payload.list[i]);
                 }
             }
-            setCity(payload);
-            console.table(weatheritems0);
-            console.table(weatheritems1);
-            console.table(weatheritems2);
-            console.table(weatheritems3);
-            console.table(weatheritems4);
-            if (weatheritems0.length < 3) {
-                // building the html strings to pass along
-                html1 = '<p>' + sortHighsForDay(weatheritems1) + '&#176;</p>' +
-                    '<p>' + sortLowsForDay(weatheritems1) + '&#176;</p>' +
-                    '<p>' + setCondition(weatheritems1) + '</p>';
-                html2 = '<p>' + sortHighsForDay(weatheritems2) + '&#176;</p>' +
-                    '<p>' + sortLowsForDay(weatheritems2) + '&#176;</p>' +
-                    '<p>' + setCondition(weatheritems2) + '</p>';
-                html3 = '<p>' + sortHighsForDay(weatheritems3) + '&#176;</p>' +
-                    '<p>' + sortLowsForDay(weatheritems3) + '&#176;</p>' +
-                    '<p>' + setCondition(weatheritems3) + '</p>';
-                // render the strings now (how stringy!)
-                $('#weather1').html(html1);
-                $('#weather2').html(html2);
-                $('#weather3').html(html3);
-                console.log('weather condition code day 1: ' + setCondition(weatheritems1));
-                console.log('weather condition code day 2: ' + setCondition(weatheritems2));
-                console.log('weather condition code day 3: ' + setCondition(weatheritems3));
-
-            } else {
-                html1 = '<p>' + sortHighsForDay(weatheritems0) + '&#176;</p>' +
-                    '<p>' + sortLowsForDay(weatheritems0) + '&#176;</p>';
-                html2 = '<p>' + sortHighsForDay(weatheritems1) + '&#176;</p>' +
-                    '<p>' + sortLowsForDay(weatheritems1) + '&#176;</p>';
-                html3 = '<p>' + sortHighsForDay(weatheritems2) + '&#176;</p>' +
-                    '<p>' + sortLowsForDay(weatheritems2) + '&#176;</p>';
-                // render the strings now (how stringy!)
-                $('#weather1').html(html1);
-                $('#weather2').html(html2);
-                $('#weather3').html(html3);
-                console.log('weather condition code day 0: ' + setCondition(weatheritems0));
-                console.log('weather condition code day 1: ' + setCondition(weatheritems1));
-                console.log('weather condition code day 2: ' + setCondition(weatheritems2));
-
-            }
-
         }
-        function setCity(payload) {
-            $('#city_from_weather').text('for ' + payload.city.name);
+        function renderWeather(result) {
+            $('#city_from_weather').text('for ' + result.city.name);
+            var list = [];
+            if (weatheritems0.length < 3) {
+                list = [ weatheritems1, weatheritems2, weatheritems3 ];
+            } else list = [ weatheritems0, weatheritems1, weatheritems2];
+            // building the html strings to pass along
+            list.forEach(function(list , index) {
+                switch (index) {
+                    case 0: $('#weather1').html('<p class="high-temp">' + sortHighsForDay(list) + '&#176;</p>' +
+                        '<p class="low-temp">' + sortLowsForDay(list) + '&#176;</p>' +
+                        '<p class="condition">' + setCondition(list).toUpperCase() + '</p>' +
+                        '<p class="weather-icons">' + setIcon(list) + '</p>');
+                        break;
+                    case 1: $('#weather2').html('<p class="high-temp">' + sortHighsForDay(list) + '&#176;</p>' +
+                        '<p class="low-temp">' + sortLowsForDay(list) + '&#176;</p>' +
+                        '<p class="condition">' + setCondition(list).toUpperCase() + '</p>' +
+                        '<p class="weather-icons">' + setIcon(list) + '</p>');
+                        break;
+                    case 2: $('#weather3').html('<p class="high-temp">' + sortHighsForDay(list) + '&#176;</p>' +
+                        '<p class="low-temp">' + sortLowsForDay(list) + '&#176;</p>' +
+                        '<p class="condition">' + setCondition(list).toUpperCase() + '</p>' +
+                        '<p class="weather-icons">' + setIcon(list) + '</p>');
+                    break;
+                }
+            });
         }
         function sortHighsForDay(weatheritems){
             var high = 0;
@@ -765,232 +742,159 @@
             switch (condition) {
                 // thunderstorms
                 case 200:
-                    console.log('thunderstorm with light rain');
-                    break;
+                    return 'thunderstorm with light rain';
                 case 201:
-                    console.log('thunderstorm with rain');
-                    break;
+                    return 'thunderstorm with rain';
                 case 202:
-                    console.log('thunderstorm with heavy rain');
-                    break;
+                    return 'thunderstorm with heavy rain';
                 case 210:
-                    console.log('light thunderstorm');
-                    break;
+                    return 'light thunderstorm';
                 case 211:
-                    console.log('thunderstorm');
-                    break;
+                    return 'thunderstorm';
                 case 212:
-                    console.log('heavy thunderstorm');
-                    break;
+                    return 'heavy thunderstorm';
                 case 221:
-                    console.log('ragged thunderstorm');
-                    break;
+                    return 'ragged thunderstorm';
                 case 230:
-                    console.log('thunderstorm with light drizzle');
-                    break;
+                    return 'thunderstorm with light drizzle';
                 case 231:
-                    console.log('thunderstorm with drizzle');
-                    break;
+                    return 'thunderstorm with drizzle';
                 case 232:
-                    console.log('thunderstorm with heavy drizzle');
-                    break;
+                    return 'thunderstorm with heavy drizzle';
                 // drizzle
                 case 300:
-                    console.log('light intensity drizzle');
-                    break;
+                    return 'light intensity drizzle';
                 case 301:
-                    console.log('drizzle');
-                    break;
+                    return 'drizzle';
                 case 302:
-                    console.log('heavy intensity drizzle');
-                    break;
+                    return 'heavy intensity drizzle';
                 case 310:
-                    console.log('light intensity drizzle rain');
-                    break;
+                    return 'light intensity drizzle rain';
                 case 311:
-                    console.log('drizzle rain');
-                    break;
+                    return 'drizzle rain';
                 case 312:
-                    console.log('heavy intensity drizzle rain');
-                    break;
+                    return 'heavy intensity drizzle rain';
                 case 313:
-                    console.log('shower rain and drizzle');
-                    break;
+                    return 'shower rain and drizzle';
                 case 314:
-                    console.log('heavy shower rain and drizzle');
-                    break;
+                    return 'heavy shower rain and drizzle';
                 case 321:
-                    console.log('shower drizzle');
-                    break;
+                    return 'shower drizzle';
                 // rain
                 case 500:
-                    console.log(' light rain');
-                    break;
+                    return ' light rain';
                 case 501:
-                    console.log('moderate rain');
-                    break;
+                    return 'moderate rain';
                 case 502:
-                    console.log('heavy intensity rain');
-                    break;
+                    return 'heavy intensity rain';
                 case 503:
-                    console.log('very heavy rain');
-                    break;
+                    return 'very heavy rain';
                 case 504:
-                    console.log('extreme rain');
-                    break;
+                    return 'extreme rain';
                 case 511:
-                    console.log('freezing rain');
-                    break;
+                    return 'freezing rain';
                 case 520:
-                    console.log('light intensity shower rain');
-                    break;
+                    return 'light intensity shower rain';
                 case 521:
-                    console.log('shower rain');
-                    break;
+                    return 'shower rain';
                 case 522:
-                    console.log('heavy intensity shower rain');
-                    break;
+                    return 'heavy intensity shower rain';
                 case 531:
-                    console.log('ragged shower rain');
-                    break;
+                    return 'ragged shower rain';
                 // snow
                 case 600:
-                    console.log('light snow');
-                    break;
+                    return 'light snow';
                 case 601:
-                    console.log('snow');
-                    break;
+                    return 'snow';
                 case 602:
-                    console.log('heavy snow');
-                    break;
+                    return 'heavy snow';
                 case 611:
-                    console.log('sleet');
-                    break;
+                    return 'sleet';
                 case 612:
-                    console.log('shower sleet');
-                    break;
+                    return 'shower sleet';
                 case 615:
-                    console.log('light rain and snow');
-                    break;
+                    return 'light rain and snow';
                 case 616:
-                    console.log('rain and snow');
-                    break;
+                    return 'rain and snow';
                 case 620:
-                    console.log('light shower snow');
-                    break;
+                    return 'light shower snow';
                 case 621:
-                    console.log('shower snow');
-                    break;
+                    return 'shower snow';
                 case 622:
-                    console.log('heavy shower snow');
-                    break;
+                    return 'heavy shower snow';
                 // atmosphere
                 case 701:
-                    console.log('mist');
-                    break;
+                    return 'mist';
                 case 711:
-                    console.log('smoke');
-                    break;
+                    return 'smoke';
                 case 721:
-                    console.log('haze');
-                    break;
+                    return 'haze';
                 case 731:
-                    console.log('sand, dust whirls');
-                    break;
+                    return 'sand, dust whirls';
                 case 741:
-                    console.log('fog');
-                    break;
+                    return 'fog';
                 case 751:
-                    console.log('sand');
-                    break;
+                    return 'sand';
                 case 761:
-                    console.log('dust');
-                    break;
+                    return 'dust';
                 case 762:
-                    console.log('volcanic ash');
-                    break;
+                    return 'volcanic ash';
                 case 771:
-                    console.log('squalls');
-                    break;
+                    return 'squalls';
                 case 781:
-                    console.log('tornado');
-                    break;
+                    return 'tornado';
                 // clear
                 case 800:
-                    console.log('clear sky');
-                    break;
+                    return 'clear sky';
                 // clouds
                 case 801:
-                    console.log('few clouds');
-                    break;
+                    return 'few clouds';
                 case 802:
-                    console.log('scattered clouds');
-                    break;
+                    return 'scattered clouds';
                 case 803:
-                    console.log('broken clouds');
-                    break;
+                    return 'broken clouds';
                 case 804:
-                    console.log('overcast clouds');
-                    break;
+                    return 'overcast clouds';
                 // extreme
                 case 900:
-                    console.log('tornado');
-                    break;
+                    return 'tornado';
                 case 901:
-                    console.log('tropical storm');
-                    break;
+                    return 'tropical storm';
                 case 902:
-                    console.log('hurricane');
-                    break;
+                    return 'hurricane';
                 case 903:
-                    console.log('cold');
-                    break;
+                    return 'cold';
                 case 904:
-                    console.log('hot');
-                    break;
+                    return 'hot';
                 case 905:
-                    console.log('windy');
-                    break;
+                    return 'windy';
                 case 906:
-                    console.log('hail');
-                    break;
+                    return 'hail';
                 // additional
                 case 951:
-                    console.log('calm');
-                    break;
+                    return 'calm';
                 case 952:
-                    console.log('light breeze');
-                    break;
+                    return 'light breeze';
                 case 953:
-                    console.log('gentle breeze');
-                    break;
+                    return 'gentle breeze';
                 case 954:
-                    console.log('moderate breeze');
-                    break;
+                    return 'moderate breeze';
                 case 955:
-                    console.log('fresh breeze');
-                    break;
+                    return 'fresh breeze';
                 case 956:
-                    console.log('strong breeze');
-                    break;
+                    return 'strong breeze';
                 case 957:
-                    console.log('high wind, near gale');
-                    break;
+                    return 'high wind, near gale';
                 case 958:
-                    console.log('gale');
-                    break;
+                    return 'gale';
                 case 959:
-                    console.log('severe gale');
-                    break;
+                    return 'severe gale';
                 case 960:
-                    console.log('storm');
-                    break;
+                    return 'storm';
                 case 961:
-                    console.log('violent storm');
-                    break;
+                    return 'violent storm';
                 case 962:
-                    console.log('hurricane');
-                    break;
+                    return 'hurricane';
             }
             return condition;
             // now that we have the condition, let's make a table that we compare our conditions to
@@ -1000,6 +904,134 @@
             // then get an image based on the time for the listing
 
             // and now apply such an image
+        }
+        function setIcon(weatheritems) {
+            // let's get the primary condition code && give it a picture
+            var condition = weatheritems[0].weather[0].id;
+            switch (condition) {
+                // thunderstorms
+                case 200:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 201:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 202:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 210:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 211:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 212:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 221:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 230:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 231:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                case 232:
+                    return '<img src="http://openweathermap.org/img/w/11d.png">';
+                // drizzle
+                case 300:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 301:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 302:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 310:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 311:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 312:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 313:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 314:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                case 321:
+                    return '<img src="http://openweathermap.org/img/w/09d.png">';
+                // rain
+                case 500:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 501:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 502:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 503:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 504:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 511:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 520:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 521:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 522:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                case 531:
+                    return '<img src="http://openweathermap.org/img/w/10d.png">';
+                // snow
+                case 600:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 601:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 602:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 611:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 612:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 615:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 616:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 620:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 621:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                case 622:
+                    return '<img src="http://openweathermap.org/img/w/13d.png">';
+                // atmosphere
+                case 701:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 711:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 721:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 731:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 741:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 751:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 761:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 762:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 771:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                case 781:
+                    return '<img src="http://openweathermap.org/img/w/50d.png">';
+                // clear
+                case 800:
+                    return '<img src="http://openweathermap.org/img/w/01d.png">';
+                // clouds
+                case 801:
+                    return '<img src="http://openweathermap.org/img/w/02d.png">';
+                case 802:
+                    return '<img src="http://openweathermap.org/img/w/03d.png">';
+                case 803:
+                    return '<img src="http://openweathermap.org/img/w/04d.png">';
+                case 804:
+                    return '<img src="http://openweathermap.org/img/w/04d.png">';
+                // now that we have the condition, let's make a table that we compare our conditions to
+
+                // after we refer to this table, we can now set the condition
+
+                // then get an image based on the time for the listing
+
+                // and now apply such an image
+            }
         }
         initMap();
     });
