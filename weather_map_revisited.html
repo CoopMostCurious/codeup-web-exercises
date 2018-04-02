@@ -65,31 +65,31 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <div class="panel panel-info">
+            <div class="panel panel-info text-center">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Today</h3>
+                    <h3 id="day1-heading" class="panel-title">Today</h3>
                 </div>
-                <div class="panel-body text-center">
+                <div class="panel-body">
                     <span id="weather1"></span>
                 </div>
             </div>
         </div><!-- /.col-sm-4 -->
         <div class="col-sm-4">
-            <div class="panel panel-info">
+            <div class="panel panel-info text-center">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Tomorrow</h3>
+                    <h3 id="day2-heading" class="panel-title">Tomorrow</h3>
                 </div>
-                <div class="panel-body text-center">
+                <div class="panel-body">
                     <span id="weather2"></span>
                 </div>
             </div>
         </div><!-- /.col-sm-4 -->
         <div class="col-sm-4">
-            <div class="panel panel-info">
+            <div class="panel panel-info text-center">
                 <div class="panel-heading">
-                    <h3 class="panel-title">The Day After</h3>
+                    <h3 id="day3-heading" class="panel-title">The Day After</h3>
                 </div>
-                <div class="panel-body text-center">
+                <div class="panel-body">
                     <span id="weather3"></span>
                 </div>
             </div>
@@ -98,7 +98,7 @@
     <div class="page-header">
         <h3>Map</h3>
     </div>
-    <div id="map-canvas" class="panel"></div>
+    <div id="map-canvas" class="panel text-center"></div>
 
     <!--<div class="page-header">-->
         <!--<h1>Buttons</h1>-->
@@ -618,6 +618,7 @@
         var map, infoWindow, pos, payload;
         var apiKey = "cb998e047c25d215f80ec8cae5eea5fe";
         for (var i = 0; i !== 5; i++) {
+            // Creates an array based on the index of i, which is why eval is being used
             var name = 'weatheritems' + i;
             eval(name + '= []');
         }
@@ -692,25 +693,41 @@
             $('#city_from_weather').text('for ' + result.city.name);
             var list = [];
             if (weatheritems0.length < 3) {
+                $('#day1-heading').html('<h3>Tomorrow</h3>');
+                $('#day2-heading').html('<h3>Day After Tomorrow</h3>');
+                $('#day3-heading').html('<h3>Day After That</h3>');
                 list = [ weatheritems1, weatheritems2, weatheritems3 ];
             } else list = [ weatheritems0, weatheritems1, weatheritems2];
+                $('#day1-heading').html('<h3>Today</h3>');
+                $('#day2-heading').html('<h3>Tomorrow</h3>');
+                $('#day3-heading').html('<h3>Day After Tomorrow</h3>');
             // building the html strings to pass along
             list.forEach(function(list , index) {
+                // used the index in the for-each loop in order to rotate the three days
                 switch (index) {
-                    case 0: $('#weather1').html('<p class="high-temp">' + sortHighsForDay(list) + '&#176;</p>' +
-                        '<p class="low-temp">' + sortLowsForDay(list) + '&#176;</p>' +
+                    case 0: $('#weather1').html('<p class="high-temp">High ' + sortHighsForDay(list) + '&#176;</p>' +
+                        '<p class="low-temp">Low ' + sortLowsForDay(list) + '&#176;</p>' +
                         '<p class="condition">' + setCondition(list).toUpperCase() + '</p>' +
-                        '<p class="weather-icons">' + setIcon(list) + '</p>');
+                        '<p class="weather-icons">' + setIcon(list) + '</p>' +
+                        '<p class="humidity">Humidity ' + getHumidity(list) + '</p>' +
+                        '<p class="wind">Wind ' + getWind(list) + '</p>' +
+                        '<p class="pressure">Pressure ' + getPressure(list) + '</p>');
                         break;
-                    case 1: $('#weather2').html('<p class="high-temp">' + sortHighsForDay(list) + '&#176;</p>' +
-                        '<p class="low-temp">' + sortLowsForDay(list) + '&#176;</p>' +
+                    case 1: $('#weather2').html('<p class="high-temp">High ' + sortHighsForDay(list) + '&#176;</p>' +
+                        '<p class="low-temp">Low ' + sortLowsForDay(list) + '&#176;</p>' +
                         '<p class="condition">' + setCondition(list).toUpperCase() + '</p>' +
-                        '<p class="weather-icons">' + setIcon(list) + '</p>');
+                        '<p class="weather-icons">' + setIcon(list) + '</p>' +
+                        '<p class="humidity">Humidity ' + getHumidity(list) + '</p>' +
+                        '<p class="wind">Wind ' + getWind(list) + '</p>' +
+                        '<p class="pressure">Pressure ' + getPressure(list) + '</p>');
                         break;
-                    case 2: $('#weather3').html('<p class="high-temp">' + sortHighsForDay(list) + '&#176;</p>' +
-                        '<p class="low-temp">' + sortLowsForDay(list) + '&#176;</p>' +
+                    case 2: $('#weather3').html('<p class="high-temp">High ' + sortHighsForDay(list) + '&#176;</p>' +
+                        '<p class="low-temp">Low ' + sortLowsForDay(list) + '&#176;</p>' +
                         '<p class="condition">' + setCondition(list).toUpperCase() + '</p>' +
-                        '<p class="weather-icons">' + setIcon(list) + '</p>');
+                        '<p class="weather-icons">' + setIcon(list) + '</p>' +
+                        '<p class="humidity">Humidity ' + getHumidity(list) + '</p>' +
+                        '<p class="wind">Wind ' + getWind(list) + '</p>' +
+                        '<p class="pressure">Pressure ' + getPressure(list) + '</p>');
                     break;
                 }
             });
@@ -904,6 +921,27 @@
             // then get an image based on the time for the listing
 
             // and now apply such an image
+        }
+        function getHumidity(weatheritems) {
+            var humidity = 0;
+            for (var i = 0; i < weatheritems.length; i++) {
+                humidity = humidity + weatheritems[i].main.humidity;
+            }
+            return parseInt((humidity / weatheritems.length).toString());
+        }
+        function getWind(weatheritems) {
+            var wind = 0;
+            for (var i = 0; i < weatheritems.length; i++) {
+                wind = wind + weatheritems[i].wind.speed;
+            }
+            return (wind / weatheritems.length).toFixed(2);
+        }
+        function getPressure(weatheritems) {
+            var pressure = 0;
+            for (var i = 0; i < weatheritems.length; i++) {
+                pressure = pressure + weatheritems[i].main.pressure;
+            }
+            return (pressure / weatheritems.length).toFixed(1);
         }
         function setIcon(weatheritems) {
             // let's get the primary condition code && give it a picture
