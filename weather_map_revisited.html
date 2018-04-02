@@ -105,7 +105,7 @@
                 </span>
             </div><!-- /input-group -->
         </div>
-        <div class="progress col-sm-6">
+        <div id="weather-loading-status" class="progress col-sm-6">
             <div id="update-progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
                 <span id="update-message"></span>
             </div>
@@ -637,8 +637,6 @@
         // var payload;
         var apiKey = "cb998e047c25d215f80ec8cae5eea5fe";
         function initMap() {
-            $('#update-message').html('<p>Begin initial map load...</p>');
-            updatePercentage(10);
             var markers = [];
             map = new google.maps.Map(document.getElementById('map-canvas'), {
                 center: pos,
@@ -647,7 +645,6 @@
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 infoWindow = new google.maps.InfoWindow();
-                updatePercentage(30);
                 $('#update-message').html('<p>Update Map...</p>');
                 navigator.geolocation.getCurrentPosition(function (position) {
                     pos = {
@@ -655,7 +652,6 @@
                         lng: position.coords.longitude
                     };
                     map.setCenter(pos);
-                    updatePercentage(40);
                     getWeather(pos.lat, pos.lng);
                     // added the event listener to live inside the google map once the page is loaded
                     map.addListener('click', function(e) {
@@ -720,25 +716,25 @@
                 url: 'http://api.openweathermap.org/data/2.5/forecast?lat=' +
                     lat + '&lon=' + lng + '&units=imperial' + '&appid=' + apiKey,
                 success: function(result) {
-                    updatePercentage(50);
+                    $('#weather-loading-status').fadeIn();
+                    updatePercentage(40);
                     $('#update-message').html('<p>Updating weather...');
                     for (var i = 0; i !== 5; i++) {
+                        updatePercentage(60);
                         // Creates an array based on the index of i, which is why eval is being used
                         var name = 'weatheritems' + i;
                         eval(name + '= []');
                     }
                     var timing = setTimeout(sortWeatherByLocalTime(result), 1000);
-                    updatePercentage(60);
                     renderWeather(result);
-                    updatePercentage(70);
                     clearTimeout(timing);
                 }
             });
         }
         function sortWeatherByLocalTime(payload) {
             // sorting out the results by the day
-            updatePercentage(80);
             var compare = new Date(payload.list[0].dt * 1000);
+            updatePercentage(80);
             for (var i = 0; i < payload.cnt; i++) {
                 if (compare.getUTCDate() === new Date(payload.list[i].dt * 1000).getUTCDate()) {
                     weatheritems0.push(payload.list[i]);
@@ -754,7 +750,9 @@
             }
         }
         function renderWeather(result) {
-            updatePercentage(90);
+            $('#update-progress').addClass('progress-bar-success');
+            updatePercentage(100);
+            $('#update-message').html('<p>Weather loaded</p>');
             $('#city_from_weather').text('for ' + result.city.name);
             var list = [];
             if (weatheritems0.length < 3) {
@@ -795,9 +793,8 @@
                         '<p class="pressure">Pressure ' + getPressure(list) + '</p>');
                     break;
                 }
+                $('#weather-loading-status').fadeToggle();
             });
-            updatePercentage(100);
-            $('#update-progress').addClass('progress-bar-success');
         }
         function sortHighsForDay(weatheritems){
             var high = 0;
